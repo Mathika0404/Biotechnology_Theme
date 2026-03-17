@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Biotech Dashboard</title>
+
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="./css/patient-dashboard.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <!-- LEFT SIDE -->
+    <div class="nav-left">
+
+<div class="logo">
+    <img src="./images/stackly_logo.webp" alt="Stacckly Logo" class="logo-img">
+</div>
+
+        <div class="menu-btn" id="openMenu">
+            <i class="ri-menu-line"></i>
+        </div>
+
+    </div>
+
+
+    <!-- RIGHT SIDE -->
+    <div class="nav-right">
+
+        <!-- SEARCH -->
+<form class="nav-search" action="404dashboard.html">
+
+    <i class="ri-search-line"></i>
+    
+    <input 
+        type="text" 
+        placeholder="Search experiments"
+        name="search"
+    >
+
+</form>
+
+
+        <!-- BIOTECH ICONS -->
+<div class="nav-icons-wrapper">
+
+    <a href="404dashboard.html" class="nav-icon">
+        <i class="ri-edit-box-line"></i>
+    </a>
+
+    <a href="404dashboard.html" class="nav-icon notification">
+        <i class="ri-notification-3-line"></i>
+        <span class="badge">20</span>
+    </a>
+
+</div>
+
+<!-- PROFILE -->
+<div class="profile">
+
+    <div class="avatar">
+        <i class="ri-user-3-line"></i>
+    </div>
+
+    <div class="profile-info">
+        <p class="name">Patient John</p>
+        <p class="email">johnsmith@gmail.com</p>
+    </div>
+
+</div>
+
+    </div>
+
+</nav>
+
+
+<!-- SIDEBAR -->
+
+<div class="sidebar" id="sidebar">
+
+    <!-- SIDEBAR HEADER -->
+    <div class="sidebar-header">
+
+        <img src="./images/stackly_logo.webp" alt="logo" class="sidebar-logo">
+
+        <div class="close-btn" id="closeMenu">
+            <i class="ri-close-line"></i>
+        </div>
+
+    </div>
+
+
+    <!-- SIDEBAR MENU -->
+<ul class="sidebar-menu">
+
+    <li>
+        <a href="#patient-overview">
+            <i class="ri-dashboard-line"></i>
+            <span>Patient Overview</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="#clinical-section">
+            <i class="ri-flask-line"></i>
+            <span>Clinical Tests</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="#reports-section">
+            <i class="ri-file-chart-line"></i>
+            <span>Medical Reports</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="#bio-billing">
+            <i class="ri-virus-line"></i>
+            <span>Billing</span>
+        </a>
+    </li>
+
+
+    <li>
+        <a href="404dashboard.html">
+            <i class="ri-settings-3-line"></i>
+            <span>Settings</span>
+        </a>
+    </li>
+
+</ul>
+
+</div>
+
+<!-- PATIENT OVERVIEW -->
+<section class="patient-overview page-section" id="patient-dashboard">
+
+    <!-- HEADER -->
+    <div class="overview-header">
+        <h1>Welcome, John Smith 🧬</h1>
+        <p>Overview of your genomic profile, molecular diagnostics, and clinical insights</p>
+    </div>
+
+    <!-- MAIN GRID -->
+    <div class="overview-grid">
+
+        <!-- PROFILE CARD -->
+        <div class="profile-card">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="patient">
+
+            <h3>John Smith</h3>
+            <p class="patient-id">Bio ID: #BIO-45821</p>
+
+            <div class="contact-info">
+                <p><i class="ri-dna-line"></i> Genome ID: GSX-90876</p>
+                <p><i class="ri-hospital-line"></i> BioLab: Genex Labs</p>
+            </div>
+        </div>
+
+        <!-- DETAILS -->
+<div class="details-card">
+
+    <div class="info-box">
+        <h4>Molecular Profile</h4>
+        <p><strong>DNA Type:</strong> Homo sapiens</p>
+        <p><strong>Gene Marker:</strong> BRCA1 Positive</p>
+        <p><strong>Blood Group:</strong> O+</p>
+        <p><strong>Sample Collected:</strong> 15 Mar 2025</p>
+
+        <!-- EXTRA 3 LINES -->
+        <p><strong>Genome Coverage:</strong> 99.2%</p>
+        <p><strong>Cell Type:</strong> Somatic Cells</p>
+        <p><strong>Analysis Method:</strong> PCR Sequencing</p>
+    </div>
+
+    <div class="info-box">
+        <h4>Genomic Insights</h4>
+        <p><strong>Mutation Status:</strong> Detected</p>
+        <p><strong>Pathogen Screening:</strong> Negative</p>
+        <p><strong>Protein Expression:</strong> Normal</p>
+        <p><strong>Test Status:</strong> Completed</p>
+
+        <!-- EXTRA 3 LINES -->
+        <p><strong>Variant Type:</strong> SNP</p>
+        <p><strong>Gene Expression Level:</strong> High</p>
+        <p><strong>Clinical Risk:</strong> Moderate</p>
+    </div>
+
+</div>
+
+        <!-- STATS -->
+        <div class="stats-card">
+
+            <div class="stat-box">
+                <h2>18</h2>
+                <p>Genomic Reports</p>
+            </div>
+
+            <div class="stat-box">
+                <h2>7</h2>
+                <p>Lab Appointments</p>
+            </div>
+
+            <div class="stat-box">
+                <h2>4</h2>
+                <p>Active Analyses</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="bio-sections page-section" id="clinical-tests">
+
+    <!-- TEST RESULTS -->
+    <div class="section-card">
+        <div class="section-header">
+            <h3>Your Test Results</h3>
+            <p>Recent genetic and diagnostic tests</p>
+        </div>
+
+        <div class="test-card success">
+            <div class="test-top">
+                <h4>Whole Genome Sequencing</h4>
+                <span class="status green">Completed</span>
+            </div>
+
+            <p class="date">Completed on January 28, 2026</p>
+
+            <div class="test-body">
+                <p><strong>AI Risk Assessment:</strong></p>
+                <ul>
+                    <li>Type 2 Diabetes: <span class="risk mid">Moderate Risk</span></li>
+                    <li>Cardiovascular Disease: <span class="risk low">Low Risk</span></li>
+                    <li>Cancer Predisposition: <span class="risk low">Low Risk</span></li>
+                </ul>
+            </div>
+
+<div class="test-actions">
+    <button class="btn primary" onclick="go404()">View Full Report</button>
+    <button class="btn light" onclick="go404()">Schedule Counseling</button>
+</div>
+        </div>
+
+        <div class="test-card info">
+            <div class="test-top">
+                <h4>Pharmacogenomics Panel</h4>
+                <span class="status blue">Completed</span>
+            </div>
+
+            <p class="date">Completed on December 15, 2025</p>
+            <p>Analysis of gene-drug interactions available.</p>
+
+            <button class="btn primary" onclick="go404()">Download Report</button>
+        </div>
+    </div>
+
+
+    <!-- GRID -->
+    <div class="bottom-grid">
+
+        <!-- APPOINTMENTS -->
+        <div class="section-card">
+            <div class="section-header flex">
+                <h3>Upcoming Appointments</h3>
+                <button class="btn primary small" onclick="go404()">Book New</button>
+            </div>
+
+            <div class="appointment-card">
+                <h4>Genetic Counseling</h4>
+                <p>Dr. Emily Chen</p>
+                <p>Feb 12, 2026 • 10:00 AM</p>
+                <span class="status light">Scheduled</span>
+            </div>
+        </div>
+
+
+        <!-- BILLING -->
+        <div class="section-card">
+            <div class="section-header flex">
+                <h3>Billing & Payments</h3>
+                <button class="btn primary small" onclick="go404()">View All</button>
+            </div>
+
+            <div class="bill-item">
+                <div>
+                    <h4>Genome Sequencing</h4>
+                    <p>Jan 15, 2026</p>
+                </div>
+                <div class="bill-right">
+                    <span>$2500</span>
+                    <small class="paid">paid</small>
+                </div>
+            </div>
+
+            <div class="bill-item">
+                <div>
+                    <h4>Genetic Counseling</h4>
+                    <p>Feb 08, 2026</p>
+                </div>
+                <div class="bill-right">
+                    <span>$250</span>
+                    <small class="pending">pending</small>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="clinical-section page-section">
+
+    <!-- HEADER -->
+    <div class="clinical-header">
+        <h2>Clinical Tests</h2>
+        <p>Track advanced genomic therapies and patient participation</p>
+    </div>
+
+    <!-- CARD -->
+    <div class="clinical-card">
+
+        <!-- TAGS -->
+        <div class="tags">
+            <span class="tag blue">Phase III</span>
+            <span class="tag dark">Active Study</span>
+        </div>
+
+        <!-- TITLE -->
+        <h3>CRISPR Gene Editing for Blood Disorders</h3>
+        <p class="sub-text">Target Condition: Sickle Cell Anemia • Therapy: CRISPR-Cas9</p>
+
+        <!-- INFO ROW -->
+<div class="clinical-info">
+
+    <!-- ENROLLMENT -->
+    <div class="info-item">
+        <i class="ri-group-line icon purple"></i>
+        <div>
+            <p class="label">Patient Enrollment</p>
+            <h4>72 / 120</h4>
+        </div>
+    </div>
+
+    <!-- START DATE -->
+    <div class="info-item">
+        <i class="ri-calendar-check-line icon green"></i>
+        <div>
+            <p class="label">Trial Started</p>
+            <h4>2026-03-10</h4>
+        </div>
+    </div>
+
+    <!-- COMPLETION DATE -->
+    <div class="info-item">
+        <i class="ri-calendar-event-line icon orange"></i>
+        <div>
+            <p class="label">Expected Completion</p>
+            <h4>2028-06-20</h4>
+        </div>
+    </div>
+
+</div>
+
+        <!-- PROGRESS -->
+        <div class="progress-section">
+            <p>Enrollment Progress <span>60%</span></p>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="clinical-footer">
+            <div>
+                <p class="label">Lead Scientist</p>
+                <h4>Dr. Rajiv Menon</h4>
+            </div>
+
+            <div class="actions">
+                <a href="404dashboard.html" class="btn dark">View Details</a>
+                <a href="404dashboard.html" class="btn green">Join Study</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="clinical-card">
+
+    <div class="tags">
+        <span class="tag blue">Phase II</span>
+        <span class="tag dark">Recruiting</span>
+    </div>
+
+    <h3>mRNA Therapy for Rare Genetic Disorders</h3>
+    <p class="sub-text">Target Condition: Cystic Fibrosis • Therapy: mRNA-based Treatment</p>
+
+    <div class="clinical-info">
+
+        <div class="info-item">
+            <i class="ri-group-line icon purple"></i>
+            <div>
+                <p class="label">Patient Enrollment</p>
+                <h4>38 / 80</h4>
+            </div>
+        </div>
+
+        <div class="info-item">
+            <i class="ri-calendar-check-line icon green"></i>
+            <div>
+                <p class="label">Trial Started</p>
+                <h4>2026-05-18</h4>
+            </div>
+        </div>
+
+        <div class="info-item">
+            <i class="ri-calendar-event-line icon orange"></i>
+            <div>
+                <p class="label">Expected Completion</p>
+                <h4>2027-11-10</h4>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="progress-section">
+        <p>Enrollment Progress <span>48%</span></p>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width:48%"></div>
+        </div>
+    </div>
+
+    <div class="clinical-footer">
+        <div>
+            <p class="label">Lead Scientist</p>
+            <h4>Dr. Meera Iyer</h4>
+        </div>
+
+        <div class="actions">
+            <a href="404dashboard.html" class="btn dark">View Details</a>
+            <a href="404dashboard.html" class="btn green">Join Study</a>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="clinical-card">
+
+    <div class="tags">
+        <span class="tag blue">Phase I</span>
+        <span class="tag dark">Ongoing</span>
+    </div>
+
+    <h3>Stem Cell Therapy for Neurodegenerative Diseases</h3>
+    <p class="sub-text">Target Condition: Parkinson’s Disease • Therapy: Neural Stem Cells</p>
+
+    <div class="clinical-info">
+
+        <div class="info-item">
+            <i class="ri-group-line icon purple"></i>
+            <div>
+                <p class="label">Patient Enrollment</p>
+                <h4>20 / 50</h4>
+            </div>
+        </div>
+
+        <div class="info-item">
+            <i class="ri-calendar-check-line icon green"></i>
+            <div>
+                <p class="label">Trial Started</p>
+                <h4>2026-02-01</h4>
+            </div>
+        </div>
+
+        <div class="info-item">
+            <i class="ri-calendar-event-line icon orange"></i>
+            <div>
+                <p class="label">Expected Completion</p>
+                <h4>2029-03-15</h4>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="progress-section">
+        <p>Enrollment Progress <span>40%</span></p>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width:40%"></div>
+        </div>
+    </div>
+
+    <div class="clinical-footer">
+        <div>
+            <p class="label">Lead Scientist</p>
+            <h4>Dr. Arjun Nair</h4>
+        </div>
+
+        <div class="actions">
+            <a href="404dashboard.html" class="btn dark">View Details</a>
+            <a href="404dashboard.html" class="btn green">Join Study</a>
+        </div>
+    </div>
+
+</div>
+
+</section>
+
+<section class="reports-section page-section" id="medical-reports">
+
+    <!-- HEADER -->
+    <div class="reports-header">
+        <div>
+            <h2>Medical Reports</h2>
+            <p>Advanced molecular diagnostics and genomic test reports</p>
+        </div>
+
+        <a href="404dashboard.html" class="btn gradient">
+            <i class="ri-play-line"></i> New Sequencing Run
+        </a>
+    </div>
+
+    <!-- GRID -->
+    <div class="reports-grid">
+
+        <!-- CARD 1 -->
+        <div class="report-card">
+            <i class="fa-solid fa-dna dna-icon"></i>
+            <span class="status done">Completed</span>
+            <h3>RNA Sequencing</h3>
+            <p>Sample: RNA-112</p>
+
+            <p>Expression Score <span>94.3%</span></p>
+            <div class="progress"><div style="width:94%"></div></div>
+
+            <p>Coverage <span>50X</span></p>
+            <p>Genes Analyzed <span>18,230</span></p>
+
+            <a href="404dashboard.html" class="btn dark">
+    <i class="ri-eye-line"></i> View
+</a>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="report-card">
+            <i class="fa-solid fa-dna dna-icon"></i>
+            <span class="status running">Analyzing</span>
+            <h3>Proteomics Analysis</h3>
+            <p>Sample: PRO-221</p>
+
+            <p>Protein Match <span>89.1%</span></p>
+            <div class="progress"><div style="width:89%"></div></div>
+
+            <p>Coverage <span>40X</span></p>
+            <p>Proteins Identified <span>6,540</span></p>
+
+            <a href="404dashboard.html" class="btn dark">
+    <i class="ri-eye-line"></i> View
+</a>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="report-card">
+            <i class="fa-solid fa-dna dna-icon"></i>
+            <span class="status done">Completed</span>
+            <h3>Metagenomics Study</h3>
+            <p>Sample: META-88</p>
+
+            <p>Microbial Diversity <span>76%</span></p>
+            <div class="progress"><div style="width:76%"></div></div>
+
+            <p>Coverage <span>25X</span></p>
+            <p>Species Detected <span>320</span></p>
+
+            <a href="404dashboard.html" class="btn dark">
+    <i class="ri-eye-line"></i> View
+</a>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="report-card">
+            <i class="fa-solid fa-dna dna-icon"></i>
+            <span class="status done">Completed</span>
+            <h3>DNA Methylation Test</h3>
+            <p>Sample: METH-450</p>
+
+            <p>Methylation Level <span>68%</span></p>
+            <div class="progress"><div style="width:68%"></div></div>
+
+            <p>Coverage <span>35X</span></p>
+            <p>Regions Analyzed <span>12,400</span></p>
+
+            <a href="404dashboard.html" class="btn dark">
+    <i class="ri-eye-line"></i> View
+</a>
+        </div>
+
+        <!-- CARD 5 -->
+        <div class="report-card">
+            <i class="fa-solid fa-dna dna-icon"></i>
+            <span class="status running">Processing</span>
+            <h3>Single Cell Analysis</h3>
+            <p>Sample: SC-778</p>
+
+            <p>Cell Resolution <span>82%</span></p>
+            <div class="progress"><div style="width:82%"></div></div>
+
+            <p>Coverage <span>60X</span></p>
+            <p>Cells Profiled <span>9,200</span></p>
+
+            <a href="404dashboard.html" class="btn dark">
+    <i class="ri-eye-line"></i> View
+</a>
+        </div>
+
+        <!-- CARD 6 -->
+        <div class="report-card">
+            <i class="fa-solid fa-dna dna-icon"></i>
+            <span class="status done">Completed</span>
+            <h3>Epigenetic Profiling</h3>
+            <p>Sample: EPI-990</p>
+
+            <p>Signal Strength <span>91%</span></p>
+            <div class="progress"><div style="width:91%"></div></div>
+
+            <p>Coverage <span>45X</span></p>
+            <p>Markers Found <span>2,870</span></p>
+
+            <a href="404dashboard.html" class="btn dark">
+    <i class="ri-eye-line"></i> View
+</a>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="bio-billing page-section" id="billing">
+
+    <!-- HEADER -->
+    <div class="billing-top">
+        <div>
+            <h2>Biotech Billing Center</h2>
+            <p>Manage genomic test charges, lab services, and research fees</p>
+        </div>
+
+        <a href="404dashboard.html" class="btn gradient">Make Payment</a>
+    </div>
+
+    <!-- SUMMARY CARDS -->
+    <div class="billing-summary">
+
+        <div class="summary-card">
+            <i class="fa-solid fa-dna"></i>
+            <p>Total Lab Charges</p>
+            <h3>$4,820</h3>
+        </div>
+
+        <div class="summary-card">
+            <i class="fa-solid fa-flask"></i>
+            <p>Pending Analysis Fees</p>
+            <h3>$640</h3>
+        </div>
+
+        <div class="summary-card">
+            <i class="fa-solid fa-shield-virus"></i>
+            <p>Insurance Coverage</p>
+            <h3>Active</h3>
+        </div>
+
+    </div>
+
+    <!-- ALERT BOX -->
+    <div class="billing-alert">
+        <div>
+            <h4>Pending Lab Payment</h4>
+            <p>$640 pending for molecular diagnostics and sequencing services</p>
+        </div>
+        <a href="404dashboard.html" class="btn dark">Pay Now</a>
+    </div>
+
+    <!-- TRANSACTION LIST -->
+    <div class="billing-history">
+
+        <div class="history-header">
+            <h3>Recent Transactions</h3>
+            <a href="404dashboard.html" class="btn light">
+                <i class="fa-solid fa-download"></i> Export
+            </a>
+        </div>
+
+        <!-- ITEM -->
+        <div class="history-item">
+            <div>
+                <h4>RNA Expression Analysis</h4>
+                <p>2026-02-12 • BioLab Payment</p>
+            </div>
+            <div class="right">
+                <span class="amount">$1,200</span>
+                <span class="badge paid">Paid</span>
+            </div>
+        </div>
+
+        <div class="history-item">
+            <div>
+                <h4>Genome Mapping Service</h4>
+                <p>2026-01-28 • Insurance Covered</p>
+            </div>
+            <div class="right">
+                <span class="amount">$2,500</span>
+                <span class="badge paid">Paid</span>
+            </div>
+        </div>
+
+        <div class="history-item">
+            <div>
+                <h4>Cell Culture Testing</h4>
+                <p>2026-03-02 • Direct Payment</p>
+            </div>
+            <div class="right">
+                <span class="amount">$640</span>
+                <span class="badge pending">Pending</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<script src="./js/patient-dashboard.js"></script>
+</body>
+</html>

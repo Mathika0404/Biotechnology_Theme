@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biotechnology Website</title>
+
+  <!-- GOOGLE FONT -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+  <!-- REMIX ICON -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<!-- PRELOADER -->
+<!-- <div id="preloader">
+  <video id="loaderVideo" autoplay muted loop playsinline>
+    <source src="./images/preloader.mp4" type="video/mp4">
+  </video>
+</div> -->
+
+
+<!-- BIOTECH LOGIN / SIGNUP MODAL -->
+
+<div id="loginModal" class="login-modal">
+
+<div class="login-box">
+
+<span class="close-btn" onclick="closeLogin()">&times;</span>
+
+<div class="bio-logo">
+<i class="fa-solid fa-dna"></i>
+</div>
+
+<h2 id="formTitle">Welcome Back</h2>
+
+<p id="formSubtitle">
+Login to access your BioTech Labs research dashboard
+</p>
+
+<form id="authForm" onsubmit="handleAuthSubmit(event)">
+
+<!-- LOGIN ROLE -->
+<div id="loginRoleBox">
+
+<label>Login As</label>
+
+<select id="loginRole">
+<option value="researcher">Researcher</option>
+<option value="admin">Administrator</option>
+<option value="patient">Patient</option>
+</select>
+
+<p class="role-note">
+Select admin, researcher, or patient to access different dashboards
+</p>
+
+</div>
+
+<!-- SIGNUP NAME -->
+<input type="text" id="fullName" placeholder="Full Name" style="display:none;">
+
+<!-- PHONE -->
+<input type="tel" id="phoneNumber" placeholder="Phone Number">
+
+<!-- EMAIL -->
+<input type="email" id="email" placeholder="Email Address" required>
+
+<!-- PASSWORD -->
+<div class="password-field">
+
+<input type="password" id="loginPassword" placeholder="Password" required>
+
+<i class="fa-solid fa-eye-slash toggle-eye"
+id="eyeIcon"
+onclick="togglePassword()"></i>
+
+</div>
+
+<!-- SIGNUP ROLE -->
+<select id="signupRole" style="display:none;">
+
+<option value="researcher">Researcher</option>
+<option value="clinician">Clinician</option>
+<option value="labtech">Lab Technician</option>
+<option value="patient">Patient</option>
+
+</select>
+
+<!-- CONFIRM PASSWORD -->
+<input type="password"
+id="confirmPassword"
+placeholder="Confirm Password"
+style="display:none;">
+
+<button type="submit" class="login-submit" id="submitBtn">
+Login to Dashboard
+</button>
+
+</form>
+
+<p class="switch-text">
+
+<span id="switchText">Don't have an account?</span>
+
+<a href="javascript:void(0)" onclick="toggleAuth()">
+Sign up
+</a>
+
+</p>
+
+</div>
+
+</div>
+
+
+<!-- NAVBAR -->
+<header>
+  <nav class="navbar">
+
+    <div class="nav__header">
+      <div class="nav__logo">
+        <a href="index.html">
+          <img src="./images/stackly_logo.webp" class="logo-img" alt="logo">
+        </a>
+      </div>
+
+      <div class="nav__menu__btn" id="menu-btn">
+        <i class="ri-menu-line"></i>
+      </div>
+    </div>
+
+    <ul class="nav__links" id="nav-links">
+      <li class="dropdown">
+        <a href="index.html">Home</a>
+      </li>
+
+      <!-- <li><a href="about.html">About Us</a></li> -->
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="contact.html">Contact</a></li>
+<li>
+  <a href="javascript:void(0)" onclick="openLogin()">Login</a>
+</li>
+    </ul>
+
+  </nav>
+</header>
+
+
+
+<!--HERO SECTION-->
+<section class="bio-hero">
+
+<img src="./images/home_image.webp" class="hero-bg" alt="biotech">
+
+<div class="hero-container">
+
+<div class="hero-slide active">
+<h1>Advancing Biotechnology</h1>
+<p>Innovating genetic science and molecular discoveries for the future.</p>
+
+<div class="hero-buttons">
+<a href="404.html" class="btn-primary">Explore Research</a>
+<a href="404.html" class="btn-outline">Learn More</a>
+</div>
+</div>
+
+
+<div class="hero-slide">
+<h1>Precision DNA Sequencing</h1>
+<p>Advanced genome analysis technologies powering scientific breakthroughs.</p>
+
+<div class="hero-buttons">
+<a href="404.html" class="btn-primary">View Experiments</a>
+<a href="404.html" class="btn-outline">Discover More</a>
+</div>
+</div>
+
+
+<div class="hero-slide">
+<h1>Transforming Life Sciences</h1>
+<p>Driving innovation in biotechnology, medicine and genetic engineering.</p>
+
+<div class="hero-buttons">
+<a href="404.html" class="btn-primary">Our Projects</a>
+<a href="404.html" class="btn-outline">Contact Us</a>
+</div>
+</div>
+
+</div>
+
+<!-- DOTS -->
+<div class="hero-dots">
+<span class="dot active"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+</div>
+
+</section>
+
+
+<!-- Overview SECTION -->
+ <section class="bio-overview">
+
+<div class="overview-grid">
+
+<!-- LEFT CONTENT -->
+<div class="overview-text">
+
+<p class="sub-title">WELCOME TO BIOGEN LABS</p>
+
+<h2>Innovation in Biotechnology Research</h2>
+
+<p>
+Leading breakthroughs in genetic engineering, molecular biology, and
+biomedical innovation. Our laboratories focus on developing advanced
+biotechnology solutions to improve healthcare, agriculture, and life sciences.
+</p>
+
+<a href="#" class="overview-btn">Explore Research</a>
+
+</div>
+
+
+<!-- CENTER IMAGE -->
+<div class="overview-image">
+<img src="./images/image1.webp" alt="Biotech Scientist">
+</div>
+
+
+<!-- RIGHT STATS -->
+<div class="overview-stats">
+
+<div class="stat-box">
+<h3 class="counter" data-target="120">0</h3>
+<p>Research Scientists</p>
+</div>
+
+<div class="stat-box">
+<h3 class="counter" data-target="18">0</h3>
+<p>Years of Innovation</p>
+</div>
+
+<div class="stat-box">
+<h3 class="counter" data-target="2500">0</h3>
+<p>DNA Samples Analyzed</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FEATURES SECTION -->
+ <section class="bio-features">
+
+<div class="features-header">
+<p class="section-sub">OUR FEATURES</p>
+<h2>Advanced Biotechnology Solutions</h2>
+</div>
+
+<div class="features-cards">
+
+<!-- CARD 1 -->
+<div class="feature-card">
+
+<div class="feature-icon">
+<i class="ri-virus-line"></i>
+</div>
+
+<h3>Genome Sequencing</h3>
+
+<p>
+Advanced DNA sequencing technologies used to analyze
+genetic structures and identify mutations in medical research.
+</p>
+
+<a href="404.html" class="feature-btn">Learn More</a>
+
+</div>
+
+
+<!-- CARD 2 -->
+<div class="feature-card">
+
+<div class="feature-icon">
+<i class="ri-microscope-line"></i>
+</div>
+
+<h3>Molecular Research</h3>
+
+<p>
+Cutting-edge molecular biotechnology research for developing
+innovative medical therapies and diagnostics.
+</p>
+
+<a href="404.html" class="feature-btn">Learn More</a>
+
+</div>
+
+
+<!-- CARD 3 -->
+<div class="feature-card">
+
+<div class="feature-icon">
+<i class="ri-flask-line"></i>
+</div>
+
+<h3>Biomedical</h3>
+
+<p>
+Biotechnology advancements in drug discovery, cell therapy,
+and personalized healthcare solutions.
+</p>
+
+<a href="404.html" class="feature-btn">Learn More</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- RESEARCH SECTION -->
+ <section class="research-highlights">
+
+<div class="research-container">
+
+<!-- LEFT IMAGE -->
+<div class="research-image">
+
+<img src="./images/image2.webp" class="img-main" alt="Biotech Research">
+
+<img src="./images/image3.webp" class="img-overlap" alt="Lab Research">
+
+</div>
+
+
+<!-- RIGHT CONTENT -->
+<div class="research-content">
+
+<p class="section-subtitle">WHY CHOOSE OUR RESEARCH</p>
+
+<h2>Advanced Biotechnology Innovation<br>Driving Scientific Breakthroughs</h2>
+
+<p class="research-desc">
+Our biotechnology research focuses on genome sequencing, molecular
+engineering, and innovative medical biotechnology solutions that
+accelerate healthcare discoveries and life science advancements.
+</p>
+
+
+<div class="highlight-list">
+
+<div class="highlight-item">
+<i class="ri-flask-line"></i>
+<div>
+<h4>Genome Sequencing Research</h4>
+<p>Advanced DNA sequencing techniques for genetic disease analysis.</p>
+</div>
+</div>
+
+<div class="highlight-item">
+<i class="ri-virus-line"></i>
+<div>
+<h4>Molecular Biotechnology</h4>
+<p>Developing molecular solutions for targeted drug development.</p>
+</div>
+</div>
+
+<div class="highlight-item">
+<i class="ri-microscope-line"></i>
+<div>
+<h4>Biomedical Innovations</h4>
+<p>Creating new diagnostic technologies for modern medicine.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER SECTION -->
+<footer class="bio-footer">
+
+  <div class="footer-container">
+
+    <!-- ABOUT BIOTECH -->
+    <div class="footer-col">
+      <div class="footer-logo">
+        <img src="./images/stackly_logo.webp" alt="Biotech Lab Logo">
+      </div>
+
+      <p>
+        Our biotechnology research center focuses on genetic engineering,
+        molecular biology, and biomedical innovations. Through advanced
+        laboratory research and scientific collaboration, we develop
+        breakthrough solutions that improve healthcare, agriculture,
+        and life sciences worldwide.
+      </p>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- SOCIAL MEDIA -->
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <ul class="social-links">
+        <li>
+          <a href="404.html"><i class="ri-facebook-fill"></i> Facebook</a>
+        </li>
+        <li>
+          <a href="404.html"><i class="ri-twitter-x-line"></i> Twitter</a>
+        </li>
+        <li>
+          <a href="404.html"><i class="ri-instagram-line"></i> Instagram</a>
+        </li>
+        <li>
+          <a href="404.html"><i class="ri-linkedin-fill"></i> LinkedIn</a>
+        </li>
+        <li>
+          <a href="404.html"><i class="ri-youtube-fill"></i> YouTube</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- RESEARCH AREAS -->
+    <div class="footer-col">
+      <h4>Research Areas</h4>
+      <ul>
+        <li><a href="404.html">Genetic Engineering</a></li>
+        <li><a href="404.html">Genome Sequencing</a></li>
+        <li><a href="404.html">Molecular Biotechnology</a></li>
+        <li><a href="404.html">Stem Cell Research</a></li>
+        <li><a href="404.html">Biomedical Innovation</a></li>
+      </ul>
+    </div>
+
+    <!-- SUPPORT -->
+    <div class="footer-col">
+      <h4>Research Support</h4>
+      <ul>
+        <li><a href="404.html">Research Collaboration</a></li>
+        <li><a href="404.html">Laboratory Facilities</a></li>
+        <li><a href="404.html">Safety Guidelines</a></li>
+        <li><a href="404.html">Scientific Resources</a></li>
+        <li><a href="404.html">Terms & Conditions</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- FOOTER BOTTOM -->
+  <div class="footer-bottom">
+    <p>© 2026 BioGen Research Institute | All Rights Reserved</p>
+  </div>
+
+</footer>
+<script>
+    const counters = document.querySelectorAll(".counter");
+
+counters.forEach(counter => {
+
+const updateCounter = () => {
+
+const target = +counter.getAttribute("data-target");
+const count = +counter.innerText;
+
+const increment = target / 500;
+
+if(count < target){
+counter.innerText = Math.ceil(count + increment);
+setTimeout(updateCounter, 20);
+}else{
+counter.innerText = target;
+}
+
+};
+
+updateCounter();
+
+});
+</script>
+<script src="./js/script.js"></script>
+</body>
+</html>

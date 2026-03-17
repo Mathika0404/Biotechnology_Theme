@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biotechnology Website</title>
+
+  <!-- GOOGLE FONT -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+  <!-- REMIX ICON -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/research.css">
+</head>
+<body>
+
+
+
+<!-- BIOTECH LOGIN / SIGNUP MODAL -->
+
+<div id="loginModal" class="login-modal">
+
+<div class="login-box">
+
+<span class="close-btn" onclick="closeLogin()">&times;</span>
+
+<div class="bio-logo">
+<i class="fa-solid fa-dna"></i>
+</div>
+
+<h2 id="formTitle">Welcome Back</h2>
+
+<p id="formSubtitle">
+Login to access your BioTech Labs research dashboard
+</p>
+
+<form id="authForm" onsubmit="handleAuthSubmit(event)">
+
+<!-- LOGIN ROLE -->
+<div id="loginRoleBox">
+
+<label>Login As</label>
+
+<select id="loginRole">
+<option value="researcher">Researcher</option>
+<option value="admin">Administrator</option>
+<option value="patient">Patient</option>
+</select>
+
+<p class="role-note">
+Select admin, researcher, or patient to access different dashboards
+</p>
+
+</div>
+
+<!-- SIGNUP NAME -->
+<input type="text" id="fullName" placeholder="Full Name" style="display:none;">
+
+<!-- PHONE -->
+<input type="tel" id="phoneNumber" placeholder="Phone Number">
+
+<!-- EMAIL -->
+<input type="email" id="email" placeholder="Email Address" required>
+
+<!-- PASSWORD -->
+<div class="password-field">
+
+<input type="password" id="loginPassword" placeholder="Password" required>
+
+<i class="fa-solid fa-eye-slash toggle-eye"
+id="eyeIcon"
+onclick="togglePassword()"></i>
+
+</div>
+
+<!-- SIGNUP ROLE -->
+<select id="signupRole" style="display:none;">
+
+<option value="researcher">Researcher</option>
+<option value="clinician">Clinician</option>
+<option value="labtech">Lab Technician</option>
+<option value="patient">Patient</option>
+
+</select>
+
+<!-- CONFIRM PASSWORD -->
+<input type="password"
+id="confirmPassword"
+placeholder="Confirm Password"
+style="display:none;">
+
+<button type="submit" class="login-submit" id="submitBtn">
+Login to Dashboard
+</button>
+
+</form>
+
+<p class="switch-text">
+
+<span id="switchText">Don't have an account?</span>
+
+<a href="javascript:void(0)" onclick="toggleAuth()">
+Sign up
+</a>
+
+</p>
+
+</div>
+
+</div>
+
+<!-- NAVBAR -->
+<header>
+  <nav class="navbar">
+
+    <div class="nav__header">
+      <div class="nav__logo">
+        <a href="index.html">
+          <img src="./images/stackly_logo.webp" class="logo-img" alt="logo">
+        </a>
+      </div>
+
+      <div class="nav__menu__btn" id="menu-btn">
+        <i class="ri-menu-line"></i>
+      </div>
+    </div>
+
+    <ul class="nav__links" id="nav-links">
+      <li class="dropdown">
+        <a href="index.html">Home</a>
+      </li>
+
+      <!-- <li><a href="about.html">About Us</a></li> -->
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="contact.html">Contact</a></li>
+<li>
+  <a href="javascript:void(0)" onclick="openLogin()">Login</a>
+</li>
+    </ul>
+
+  </nav>
+</header>
+
+
+<!-- BIOTECH RESEARCH HERO -->
+<section class="research-hero">
+
+<div class="research-hero-content">
+
+<h1>Future of Biotechnology Research</h1>
+
+<p>
+Our advanced biotechnology laboratories focus on genome sequencing,
+molecular diagnostics, and biomedical innovations that transform
+modern healthcare and scientific discovery.
+</p>
+
+<a href="research.html" class="research-btn">
+Explore Research <i class="ri-arrow-right-line"></i>
+</a>
+
+</div>
+
+</section>
+
+<!--RESEARCH SECTION-->
+<section class="bio-research">
+
+<div class="research-header">
+
+<p class="research-sub">RESEARCH</p>
+
+<h2>Biotechnology</span> Innovation</h2>
+
+<p class="research-desc">
+Our biotechnology research explores genetic engineering,
+molecular diagnostics, and bioinformatics to advance
+healthcare, agriculture, and life sciences.
+</p>
+
+</div>
+
+
+<div class="research-grid">
+
+<!-- CARD 1 -->
+<div class="research-card">
+
+<div class="research-icon">
+<i class="fa-solid fa-dna"></i>
+</div>
+
+<h3>Genetic Engineering</h3>
+
+<p>
+Developing innovative gene editing technologies such as CRISPR
+to treat genetic disorders and enhance biological systems.
+</p>
+
+<div class="research-tags">
+<span>CRISPR</span>
+<span>GENOMICS</span>
+</div>
+
+</div>
+
+
+<!-- CARD 2 -->
+<div class="research-card">
+
+<div class="research-icon">
+<i class="fa-solid fa-microscope"></i>
+</div>
+
+<h3>Molecular Biology</h3>
+
+<p>
+Understanding cellular mechanisms and protein interactions
+to develop new therapeutic strategies and vaccines.
+</p>
+
+<div class="research-tags">
+<span>PROTEOMICS</span>
+<span>CELL BIOLOGY</span>
+</div>
+
+</div>
+
+
+<!-- CARD 3 -->
+<div class="research-card">
+
+<div class="research-icon">
+<i class="fa-solid fa-virus"></i>
+</div>
+
+<h3>Biomedical Research</h3>
+
+<p>
+Investigating disease mechanisms and developing advanced
+biotechnology-based diagnostics and treatments.
+</p>
+
+<div class="research-tags">
+<span>IMMUNOLOGY</span>
+<span>DIAGNOSTICS</span>
+</div>
+
+</div>
+
+
+<!-- CARD 4 -->
+<div class="research-card">
+
+<div class="research-icon">
+<i class="fa-solid fa-flask"></i>
+</div>
+
+<h3>Bioprocess Engineering</h3>
+
+<p>
+Designing efficient fermentation and bioprocess systems
+for large-scale pharmaceutical and vaccine production.
+</p>
+
+<div class="research-tags">
+<span>FERMENTATION</span>
+<span>BIOREACTORS</span>
+</div>
+
+</div>
+
+
+<!-- CARD 5 -->
+<div class="research-card">
+
+<div class="research-icon">
+<i class="fa-solid fa-database"></i>
+</div>
+
+<h3>Bioinformatics</h3>
+
+<p>
+Analyzing biological data through computational tools to
+accelerate genomics and drug discovery research.
+</p>
+
+<div class="research-tags">
+<span>DATA SCIENCE</span>
+<span>AI BIOLOGY</span>
+</div>
+
+</div>
+
+
+<!-- CARD 6 -->
+<div class="research-card">
+
+<div class="research-icon">
+<i class="fa-solid fa-heart-pulse"></i>
+</div>
+
+<h3>Medical Biotechnology</h3>
+
+<p>
+Applying biotechnology innovations in regenerative medicine,
+personalized therapies, and advanced diagnostics.
+</p>
+
+<div class="research-tags">
+<span>THERAPY</span>
+<span>MEDICINE</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- BIOTECH TEAM SECTION -->
+<section class="biotech-team">
+
+  <div class="biotech-team-header">
+    <span class="tag">RESEARCH TEAM</span>
+    <h2><span>Biotech</span> Scientists</h2>
+    <p>
+      Meet our biotechnology research experts working on
+      advanced genomics, molecular biology, and life-science innovations.
+    </p>
+  </div>
+
+  <div class="biotech-team-container">
+
+    <!-- CARD -->
+    <div class="biotech-team-card">
+
+      <div class="card-inner">
+
+        <!-- IMAGE -->
+        <div class="biotech-team-img">
+          <img src="./images/team1.webp" alt="">
+        </div>
+
+        <!-- WHITE FRONT -->
+        <div class="card-front">
+          <h3>Dr. Emily Carter</h3>
+          <span>Genomics Research Lead</span>
+
+          <div class="social-icons">
+            <a href="404.html"><i class="uil uil-facebook-f"></i></a>
+            <a href="404.html"><i class="uil uil-twitter"></i></a>
+            <a href="404.html"><i class="uil uil-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- PURPLE BACK -->
+        <div class="card-back">
+          <p>
+            Specialist in genome sequencing and gene therapy
+            research focused on improving personalized medicine.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- CARD -->
+    <div class="biotech-team-card">
+
+      <div class="card-inner">
+
+        <div class="biotech-team-img">
+          <img src="./images/team2.webp" alt="">
+        </div>
+
+        <div class="card-front">
+          <h3>Dr. Michael Lee</h3>
+          <span>Molecular Biology Scientist</span>
+
+          <div class="social-icons">
+            <a href="404.html"><i class="uil uil-facebook-f"></i></a>
+            <a href="404.html"><i class="uil uil-twitter"></i></a>
+            <a href="404.html"><i class="uil uil-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="card-back">
+          <p>
+            Conducts advanced protein interaction studies
+            to develop innovative therapeutic solutions.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- CARD -->
+    <div class="biotech-team-card">
+
+      <div class="card-inner">
+
+        <div class="biotech-team-img">
+          <img src="./images/team3.webp" alt="">
+        </div>
+
+        <div class="card-front">
+          <h3>Dr. Sarah Kim</h3>
+          <span>Bioinformatics Specialist</span>
+
+          <div class="social-icons">
+            <a href="404.html"><i class="uil uil-facebook-f"></i></a>
+            <a href="404.html"><i class="uil uil-twitter"></i></a>
+            <a href="404.html"><i class="uil uil-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="card-back">
+          <p>
+            Analyzes complex biological datasets
+            to accelerate drug discovery and genomic research.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- CARD -->
+    <div class="biotech-team-card">
+
+      <div class="card-inner">
+
+        <div class="biotech-team-img">
+          <img src="./images/team4.webp" alt="">
+        </div>
+
+        <div class="card-front">
+          <h3>Dr. David Patel</h3>
+          <span>Clinical Biotechnology Expert</span>
+
+          <div class="social-icons">
+            <a href="404.html"><i class="uil uil-facebook-f"></i></a>
+            <a href="404.html"><i class="uil uil-twitter"></i></a>
+            <a href="404.html"><i class="uil uil-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="card-back">
+          <p>
+            Focuses on translating laboratory discoveries
+            into real-world medical applications.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- CARD -->
+    <div class="biotech-team-card">
+
+      <div class="card-inner">
+
+        <div class="biotech-team-img">
+          <img src="./images/team5.webp" alt="">
+        </div>
+
+        <div class="card-front">
+          <h3>Dr. Olivia Brown</h3>
+          <span>Cell Biology Researcher</span>
+
+          <div class="social-icons">
+            <a href="404.html"><i class="uil uil-facebook-f"></i></a>
+            <a href="404.html"><i class="uil uil-twitter"></i></a>
+            <a href="404.html"><i class="uil uil-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="card-back">
+          <p>
+            Investigates cellular mechanisms and
+            regenerative biotechnology techniques.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- CARD -->
+    <div class="biotech-team-card">
+
+      <div class="card-inner">
+
+        <div class="biotech-team-img">
+          <img src="./images/team6.webp" alt="">
+        </div>
+
+        <div class="card-front">
+          <h3>Dr. Daniel Wilson</h3>
+          <span>Biotechnology Innovation Lead</span>
+
+          <div class="social-icons">
+            <a href="404.html"><i class="uil uil-facebook-f"></i></a>
+            <a href="404.html"><i class="uil uil-twitter"></i></a>
+            <a href="404.html"><i class="uil uil-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="card-back">
+          <p>
+            Leads interdisciplinary research programs
+            focused on biotech innovation and diagnostics.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER SECTION -->
+<footer class="bio-footer">
+
+  <div class="footer-container">
+
+    <!-- ABOUT BIOTECH -->
+    <div class="footer-col">
+      <div class="footer-logo">
+        <img src="./images/stackly_logo.webp" alt="Biotech Lab Logo">
+      </div>
+
+      <p>
+        Our biotechnology research center focuses on genetic engineering,
+        molecular biology, and biomedical innovations. Through advanced
+        laboratory research and scientific collaboration, we develop
+        breakthrough solutions that improve healthcare, agriculture,
+        and life sciences worldwide.
+      </p>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- SOCIAL MEDIA -->
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <ul class="social-links">
+        <li>
+          <a href="404.html"><i class="ri-facebook-fill"></i> Facebook</a>
+        </li>
+        <li>
+          <a href="404.html"><i class="ri-twitter-x-line"></i> Twitter</a>
+        </li>
+        <li>
+          <a href="404.html"><i class="ri-instagram-line"></i> Instagram</a>
+        </li>
+        <li>
+          <a href="404.html"><i class="ri-linkedin-fill"></i> LinkedIn</a>
+        </li>
+        <li>
+          <a href="404.html"><i class="ri-youtube-fill"></i> YouTube</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- RESEARCH AREAS -->
+    <div class="footer-col">
+      <h4>Research Areas</h4>
+      <ul>
+        <li><a href="404.html">Genetic Engineering</a></li>
+        <li><a href="404.html">Genome Sequencing</a></li>
+        <li><a href="404.html">Molecular Biotechnology</a></li>
+        <li><a href="404.html">Stem Cell Research</a></li>
+        <li><a href="404.html">Biomedical Innovation</a></li>
+      </ul>
+    </div>
+
+    <!-- SUPPORT -->
+    <div class="footer-col">
+      <h4>Research Support</h4>
+      <ul>
+        <li><a href="404.html">Research Collaboration</a></li>
+        <li><a href="404.html">Laboratory Facilities</a></li>
+        <li><a href="404.html">Safety Guidelines</a></li>
+        <li><a href="404.html">Scientific Resources</a></li>
+        <li><a href="404.html">Terms & Conditions</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- FOOTER BOTTOM -->
+  <div class="footer-bottom">
+    <p>© 2026 BioGen Research Institute | All Rights Reserved</p>
+  </div>
+
+</footer>
+<script>
+document.querySelectorAll(".biotech-team-card").forEach(card => {
+  card.addEventListener("click", () => {
+    card.classList.toggle("active");
+  });
+});
+</script>
+<script src="./js/script.js"></script>
+</body>
+</html>

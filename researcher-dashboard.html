@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Biotech Dashboard</title>
+
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="./css/researcher-dashboard.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <!-- LEFT SIDE -->
+    <div class="nav-left">
+
+<div class="logo">
+    <img src="./images/stackly_logo.webp" alt="Stacckly Logo" class="logo-img">
+</div>
+
+        <div class="menu-btn" id="openMenu">
+            <i class="ri-menu-line"></i>
+        </div>
+
+    </div>
+
+
+    <!-- RIGHT SIDE -->
+    <div class="nav-right">
+
+        <!-- SEARCH -->
+<form class="nav-search" action="404dashboard.html">
+
+    <i class="ri-search-line"></i>
+    
+    <input 
+        type="text" 
+        placeholder="Search experiments"
+        name="search"
+    >
+
+</form>
+
+
+        <!-- BIOTECH ICONS -->
+<div class="nav-icons-wrapper">
+
+    <a href="404dashboard.html" class="nav-icon">
+        <i class="ri-edit-box-line"></i>
+    </a>
+
+    <a href="404dashboard.html" class="nav-icon notification">
+        <i class="ri-notification-3-line"></i>
+        <span class="badge">15</span>
+    </a>
+
+</div>
+
+<!-- PROFILE -->
+<div class="profile">
+
+    <div class="avatar">
+        <i class="ri-user-3-line"></i>
+    </div>
+
+    <div class="profile-info">
+        <p class="name">Dr.Smith Researcher</p>
+        <p class="email">doctorsmith@gmail.com</p>
+    </div>
+
+</div>
+
+    </div>
+
+</nav>
+
+
+<!-- SIDEBAR -->
+
+<div class="sidebar" id="sidebar">
+
+    <!-- SIDEBAR HEADER -->
+    <div class="sidebar-header">
+
+        <img src="./images/stackly_logo.webp" alt="logo" class="sidebar-logo">
+
+        <div class="close-btn" id="closeMenu">
+            <i class="ri-close-line"></i>
+        </div>
+
+    </div>
+
+
+    <!-- SIDEBAR MENU -->
+<ul class="sidebar-menu">
+
+    <li>
+        <a href="#research-overview">
+            <i class="ri-dashboard-line"></i>
+            <span>Research Overview</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="#clinical-section">
+            <i class="ri-flask-line"></i>
+            <span>Clinical Trials</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="#genomic-section">
+            <i class="ri-file-chart-line"></i>
+            <span>Genomic Reports</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="#funding-section">
+            <i class="ri-virus-line"></i>
+            <span>Lab Funding</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="404dashboard.html">
+            <i class="ri-settings-3-line"></i>
+            <span>Settings</span>
+        </a>
+    </li>
+
+</ul>
+</div>
+
+<section class="research-overview page-section" id="research-overview">
+
+    <!-- HEADER -->
+    <div class="research-header">
+        <h1>Welcome, Dr. Smith 🧬</h1>
+        <p>Monitor your research progress, AI models, and biological data insights</p>
+    </div>
+
+    <!-- STATS GRID -->
+    <div class="research-stats">
+
+        <!-- CARD 1 -->
+        <div class="research-card blue">
+            <div class="card-top">
+                <i class="ri-flask-line"></i>
+            </div>
+            <p>Active Projects</p>
+            <h2>24</h2>
+            <span>+5 this month</span>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="research-card purple">
+            <div class="card-top">
+                <i class="ri-cpu-line"></i>
+            </div>
+            <p>AI Models Trained</p>
+            <h2>12</h2>
+            <span>+2 updated</span>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="research-card green">
+            <div class="card-top">
+                <i class="fa-solid fa-dna"></i>
+            </div>
+            <p>Samples Processed</p>
+            <h2>1,820</h2>
+            <span>+120 this week</span>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="research-card orange">
+            <div class="card-top">
+                <i class="ri-microscope-line"></i>
+            </div>
+            <p>Genome Analyses</p>
+            <h2>540</h2>
+            <span>-10 pending</span>
+        </div>
+
+    </div>
+
+    <div class="bio-dashboard-cards">
+
+    <!-- CARD 1 : SAMPLE DISTRIBUTION -->
+    <div class="bio-card">
+
+        <h4>Sample Distribution</h4>
+        <p class="sub">Across research labs</p>
+
+        <div class="circle-group">
+            <div class="circle blue">320</div>
+            <div class="circle purple">1,120</div>
+            <div class="circle green">540</div>
+        </div>
+
+    </div>
+
+    <!-- CARD 2 : RESEARCH PROGRESS (BAR CHART) -->
+<div class="bio-card">
+
+    <h4>Experiment Progress</h4>
+    <p class="sub">Monthly gene analysis</p>
+
+    <div class="bar-chart" id="barChart">
+        <div class="bar" data-value="60"></div>
+        <div class="bar" data-value="40"></div>
+        <div class="bar" data-value="75"></div>
+        <div class="bar" data-value="30"></div>
+        <div class="bar" data-value="85"></div>
+        <div class="bar" data-value="55"></div>
+    </div>
+
+    <div class="months">
+        <span>Jan</span>
+        <span>Feb</span>
+        <span>Mar</span>
+        <span>Apr</span>
+        <span>May</span>
+        <span>Jun</span>
+    </div>
+
+</div>
+
+    <!-- CARD 3 : SCAN / TEST -->
+<div class="bio-card">
+
+    <h4>Genomic Scan</h4>
+    <p class="sub">Upload samples for AI-based sequencing</p>
+
+    <p class="desc">
+        Analyze DNA samples efficiently using automated bioinformatics pipelines and AI-driven diagnostics.
+        <br>
+        Ensure high-precision genomic mapping with real-time data validation.
+        <br>
+        Accelerate research workflows with intelligent pattern detection and insights.
+    </p>
+
+    <a href="404dashboard.html" class="bio-btn">Start Scan</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="clinical-section page-section" id="clinical-section">
+
+    <!-- HEADER -->
+    <div class="clinical-header">
+        <h2>Clinical Trials</h2>
+        <p>Monitor ongoing biotechnology trials, gene therapies, and experimental studies</p>
+    </div>
+
+    <!-- CARD 1 -->
+    <div class="clinical-card">
+
+        <div class="tags">
+            <span class="tag blue">Phase III</span>
+            <span class="tag dark">In Progress</span>
+        </div>
+
+        <h3>CRISPR Therapy for Genetic Blood Disorders</h3>
+        <p class="sub-text">Focus: Gene Correction • Platform: CRISPR-Cas9</p>
+
+        <div class="clinical-info">
+
+            <div class="info-item">
+                <i class="ri-dna-line icon purple"></i>
+                <div>
+                    <p class="label">Samples Analyzed</p>
+                    <h4>210 / 300</h4>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="ri-calendar-check-line icon green"></i>
+                <div>
+                    <p class="label">Trial Initiated</p>
+                    <h4>2025-11-15</h4>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="ri-timer-line icon orange"></i>
+                <div>
+                    <p class="label">Expected Outcome</p>
+                    <h4>2027-08-10</h4>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="progress-section">
+            <p>Research Progress <span>70%</span></p>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width:70%"></div>
+            </div>
+        </div>
+
+        <div class="clinical-footer">
+            <div>
+                <p class="label">Principal Investigator</p>
+                <h4>Dr. Kavita Rao</h4>
+            </div>
+
+            <div class="actions">
+                <a href="404dashboard.html" class="btn dark">View Dataset</a>
+                <a href="404dashboard.html" class="btn green">Analyze Data</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="clinical-card">
+
+        <div class="tags">
+            <span class="tag blue">Phase II</span>
+            <span class="tag dark">Recruiting</span>
+        </div>
+
+        <h3>mRNA Vaccine Development Study</h3>
+        <p class="sub-text">Focus: Immunotherapy • Platform: mRNA Sequencing</p>
+
+        <div class="clinical-info">
+
+            <div class="info-item">
+                <i class="ri-database-2-line icon purple"></i>
+                <div>
+                    <p class="label">Data Sets Collected</p>
+                    <h4>95 / 150</h4>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="ri-calendar-check-line icon green"></i>
+                <div>
+                    <p class="label">Trial Initiated</p>
+                    <h4>2026-01-10</h4>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="ri-timer-line icon orange"></i>
+                <div>
+                    <p class="label">Expected Outcome</p>
+                    <h4>2027-04-25</h4>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="progress-section">
+            <p>Research Progress <span>55%</span></p>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width:55%"></div>
+            </div>
+        </div>
+
+        <div class="clinical-footer">
+            <div>
+                <p class="label">Principal Investigator</p>
+                <h4>Dr. Arvind Patel</h4>
+            </div>
+
+            <div class="actions">
+                <a href="404dashboard.html" class="btn dark">View Dataset</a>
+                <a href="404dashboard.html" class="btn green">Run Analysis</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="clinical-card">
+
+        <div class="tags">
+            <span class="tag blue">Phase I</span>
+            <span class="tag dark">Ongoing</span>
+        </div>
+
+        <h3>Stem Cell Regeneration Research</h3>
+        <p class="sub-text">Focus: Tissue Engineering • Platform: Stem Cell Cultures</p>
+
+        <div class="clinical-info">
+
+            <div class="info-item">
+                <i class="ri-flask-line icon purple"></i>
+                <div>
+                    <p class="label">Experiments Conducted</p>
+                    <h4>45 / 100</h4>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="ri-calendar-check-line icon green"></i>
+                <div>
+                    <p class="label">Trial Initiated</p>
+                    <h4>2026-03-05</h4>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="ri-timer-line icon orange"></i>
+                <div>
+                    <p class="label">Expected Outcome</p>
+                    <h4>2028-02-18</h4>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="progress-section">
+            <p>Research Progress <span>45%</span></p>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width:45%"></div>
+            </div>
+        </div>
+
+        <div class="clinical-footer">
+            <div>
+                <p class="label">Principal Investigator</p>
+                <h4>Dr. Neha Sharma</h4>
+            </div>
+
+            <div class="actions">
+                <a href="404dashboard.html" class="btn dark">View Results</a>
+                <a href="404dashboard.html" class="btn green">Continue Study</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="genomic-section page-section" id="genomic-section">
+
+    <!-- HEADER -->
+    <div class="genomic-header">
+        <div>
+            <h2>Genomic Reports</h2>
+            <p>Access sequencing data, molecular diagnostics, and genomic insights</p>
+        </div>
+
+        <a href="404dashboard.html" class="btn primary">
+            <i class="ri-add-line"></i> New Report
+        </a>
+    </div>
+
+    <!-- GRID -->
+    <div class="genomic-grid">
+
+        <!-- REPORT 1 -->
+        <div class="genomic-card">
+            <i class="fa-solid fa-dna icon blue"></i>
+            <h4>Whole Genome Sequencing</h4>
+            <p>Sample ID: GS-1023</p>
+            <span class="status done">Completed</span>
+
+            <div class="actions">
+                <a href="404dashboard.html" class="btn dark">
+                    <i class="ri-eye-line"></i> View
+                </a>
+            </div>
+        </div>
+
+        <!-- REPORT 2 -->
+        <div class="genomic-card">
+           <i class="fa-solid fa-flask icon purple"></i>
+            <h4>Proteomics Analysis</h4>
+            <p>Sample ID: PR-2201</p>
+            <span class="status running">Processing</span>
+
+            <div class="actions">
+                <a href="404dashboard.html" class="btn dark">
+                    <i class="ri-eye-line"></i> View
+                </a>
+            </div>
+        </div>
+
+        <!-- REPORT 3 -->
+        <div class="genomic-card">
+            <i class="fa-solid fa-microscope icon green"></i>
+            <h4>Cellular Study</h4>
+            <p>Sample ID: CS-9087</p>
+            <span class="status done">Completed</span>
+
+            <div class="actions">
+                <a href="404dashboard.html" class="btn dark">
+                    <i class="ri-eye-line"></i> View
+                </a>
+            </div>
+        </div>
+
+        <!-- REPORT 4 -->
+        <div class="genomic-card">
+            <i class="fa-solid fa-database icon orange"></i>
+            <h4>Metagenomics Report</h4>
+            <p>Sample ID: MG-7765</p>
+            <span class="status running">Analyzing</span>
+
+            <div class="actions">
+                <a href="404dashboard.html" class="btn dark">
+                    <i class="ri-eye-line"></i> View
+                </a>
+            </div>
+        </div>
+
+        <!-- REPORT 5 -->
+        <div class="genomic-card">
+            <i class="fa-solid fa-virus icon red"></i>
+            <h4>Pathogen Detection</h4>
+            <p>Sample ID: PD-5543</p>
+            <span class="status done">Completed</span>
+
+            <div class="actions">
+                <a href="404dashboard.html" class="btn dark">
+                    <i class="ri-eye-line"></i> View
+                </a>
+            </div>
+        </div>
+
+        <!-- REPORT 6 -->
+<div class="genomic-card">
+   <i class="fa-solid fa-chart-column icon blue"></i>
+    <h4>Gene Expression Analysis</h4>
+    <p>Sample ID: GE-8891</p>
+    <span class="status running">Processing</span>
+
+    <div class="actions">
+        <a href="404dashboard.html" class="btn dark">
+            <i class="ri-eye-line"></i> View
+        </a>
+    </div>
+</div>
+
+    </div>
+
+</section>
+
+<section class="funding-section page-section" id="funding-section">
+
+    <!-- HEADER -->
+    <div class="funding-header">
+        <div>
+            <h2>Lab Funding</h2>
+            <p>Manage grants, research budgets, and funding allocations</p>
+        </div>
+
+        <a href="404dashboard.html" class="btn primary">
+            <i class="fa-solid fa-plus"></i> New Funding
+        </a>
+    </div>
+
+    <!-- SUMMARY CARDS -->
+    <div class="funding-summary">
+
+        <div class="fund-card">
+            <i class="fa-solid fa-sack-dollar"></i>
+            <p>Total Funding</p>
+            <h3>$1.2M</h3>
+        </div>
+
+        <div class="fund-card">
+            <i class="fa-solid fa-chart-line"></i>
+            <p>Active Grants</p>
+            <h3>8</h3>
+        </div>
+
+        <div class="fund-card">
+            <i class="fa-solid fa-clock"></i>
+            <p>Pending Approvals</p>
+            <h3>3</h3>
+        </div>
+
+    </div>
+
+    <!-- FUNDING LIST -->
+    <div class="funding-list">
+
+        <!-- ITEM 1 -->
+        <div class="funding-item">
+            <div class="left">
+                <h4>Genome Sequencing Grant</h4>
+                <p>Issued by National Biotech Board • 2026</p>
+            </div>
+
+            <div class="right">
+                <span class="amount">$450,000</span>
+                <span class="status approved">Approved</span>
+                <a href="404dashboard.html" class="btn light">
+                    <i class="fa-solid fa-file-lines"></i> Documents
+                </a>
+            </div>
+        </div>
+
+        <!-- ITEM 2 -->
+        <div class="funding-item">
+            <div class="left">
+                <h4>AI Discovery Fund</h4>
+                <p>Issued by Global Pharma Initiative • 2026</p>
+            </div>
+
+            <div class="right">
+                <span class="amount">$320,000</span>
+                <span class="status pending">Pending</span>
+                <a href="404dashboard.html" class="btn light">
+                    <i class="fa-solid fa-file-lines"></i> Documents
+                </a>
+            </div>
+        </div>
+
+        <!-- ITEM 3 -->
+        <div class="funding-item">
+            <div class="left">
+                <h4>Stem Cell Research Grant</h4>
+                <p>Issued by BioHealth Foundation • 2025</p>
+            </div>
+
+            <div class="right">
+                <span class="amount">$280,000</span>
+                <span class="status approved">Approved</span>
+                <a href="404dashboard.html" class="btn light">
+                    <i class="fa-solid fa-file-lines"></i> Documents
+                </a>
+            </div>
+        </div>
+
+        <!-- ITEM 4 -->
+        <div class="funding-item">
+            <div class="left">
+                <h4>Pathogen Study Funding</h4>
+                <p>Issued by WHO Research Division • 2026</p>
+            </div>
+
+            <div class="right">
+                <span class="amount">$150,000</span>
+                <span class="status pending">Under Review</span>
+                <a href="404dashboard.html" class="btn light">
+                    <i class="fa-solid fa-file-lines"></i> Documents
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<script src="./js/researcher-dashboard.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,1372 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI;
+max-width:100%;
+}
+
+body{
+background:#f4f6fa;
+}
+
+html, body{
+overflow-x:hidden;
+width:100%;
+}
+
+/* NAVBAR */
+
+.navbar{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 40px;
+height:70px;
+background:#2b3440;
+color:#fff;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+/* LEFT */
+.nav-left{
+display:flex;
+align-items:center;
+gap:20px;
+height:100%;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+height:100%;
+}
+
+.logo-img{
+height:50px;
+width:auto;
+object-fit:contain;
+}
+
+.menu-btn{
+font-size:24px;
+cursor:pointer;
+
+/* move right */
+margin-right: 20px;
+
+/* styling */
+padding:8px 12px;
+border:1px solid #29c7ac;
+border-radius:8px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+transition:0.3s;
+}
+
+/* hover effect */
+.menu-btn i:hover{
+    color: #29c7ac;
+}
+
+/* SEARCH */
+
+.nav-search{
+display:flex;
+align-items:center;
+background:#3c4653;
+padding:8px 15px;
+border-radius:30px;
+gap:8px;
+width:100%;
+max-width:260px;
+}
+
+.nav-search input{
+border:none;
+background:transparent;
+outline:none;
+color:white;
+width:100%;
+}
+
+/* RIGHT */
+
+.nav-right{
+display:flex;
+align-items:center;
+gap:20px;
+}
+
+/* wrapper for both icons */
+
+.nav-icons-wrapper{
+display:flex;
+align-items:center;
+gap:20px;
+
+padding:10px 20px;
+background:#3c4653;
+border-radius:25px;
+}
+
+/* individual icons */
+
+.nav-icon{
+color:#fff;
+font-size:22px;
+text-decoration:none;
+position:relative;
+transition:0.3s;
+}
+
+.nav-icon:hover{
+color:#29c7ac;
+}
+
+/* notification badge */
+
+.badge{
+position:absolute;
+top:-6px;
+right:-8px;
+background:red;
+color:#fff;
+font-size:10px;
+padding:3px 6px;
+border-radius:50%;
+}
+
+/* PROFILE */
+
+.profile{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.avatar{
+width:40px;
+height:40px;
+background:#29c7ac;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:20px;
+color:#fff;
+}
+
+.profile-info .name{
+font-size:14px;
+font-weight:600;
+}
+
+.profile-info .email{
+font-size:12px;
+color:#ccc;
+}
+
+@media (max-width:768px){
+
+/* navbar padding */
+.navbar{
+padding:0 20px;
+}
+
+/* hide search */
+.nav-search{
+display:none;
+}
+
+/* hide icons */
+.nav-icons-wrapper{
+display:none;
+}
+
+/* hide profile text */
+.profile-info{
+display:none;
+}
+
+/* adjust menu spacing */
+.menu-btn{
+margin-left:20px;
+}
+
+/* keep profile circle visible */
+.profile{
+gap:0;
+}
+
+}
+
+
+@media (max-width:360px){
+
+.navbar{
+padding:0 15px;
+height:60px;
+}
+
+/* hide search */
+.nav-search{
+display:none;
+}
+
+/* hide icons */
+.nav-icons-wrapper{
+display:none;
+}
+
+/* hide profile name + email */
+.profile-info{
+display:none;
+}
+
+/* smaller logo */
+.logo-img{
+height:40px;
+}
+
+/* smaller avatar */
+.avatar{
+width:35px;
+height:35px;
+font-size:14px;
+}
+
+/* burger spacing */
+.menu-btn{
+margin-left: -10px;
+padding:6px 10px;
+}
+
+}
+
+
+/* SIDEBAR */
+
+.sidebar{
+position:fixed;
+top:0;
+left:-280px;
+width:280px;
+height:100vh;
+background:#1e252f;
+transition:0.4s;
+z-index:2000;
+display:flex;
+flex-direction:column;
+}
+
+/* active state */
+
+.sidebar.active{
+left:0;
+}
+
+/* SIDEBAR HEADER */
+
+.sidebar-header{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:20px;
+border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+/* LOGO */
+
+.sidebar-logo{
+height:45px;
+width:auto;
+}
+
+/* CLOSE BUTTON */
+
+.close-btn{
+font-size:28px;
+cursor:pointer;
+color:#fff;
+}
+
+/* MENU CONTAINER */
+
+.sidebar-menu{
+list-style:none;
+padding:20px 0;
+margin:0;
+flex:1;
+}
+
+/* MENU ITEMS */
+
+.sidebar-menu li{
+margin-bottom:5px;
+}
+
+/* MENU LINKS */
+
+.sidebar-menu a{
+display:flex;
+align-items:center;
+gap:14px;
+padding:14px 22px;
+color:#cfd8dc;
+text-decoration:none;
+font-size:15px;
+transition:0.3s;
+}
+
+/* ICON */
+
+.sidebar-menu a i{
+font-size:20px;
+}
+
+/* HOVER EFFECT */
+
+.sidebar-menu a:hover{
+background:#2b3440;
+color:#29c7ac;
+border-left:4px solid #29c7ac;
+}
+
+/* ACTIVE MENU */
+
+.sidebar-menu a.active{
+background:#2b3440;
+color:#29c7ac;
+border-left:4px solid #29c7ac;
+}
+
+
+/* SECTION */
+.research-overview {
+    padding: 40px;
+    background: #f4f6fa;
+}
+
+/* HEADER */
+.research-header h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.research-header p {
+    color: #7a8495;
+    margin-bottom: 25px;
+}
+
+/* GRID */
+.research-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* CARD BASE */
+.research-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #9fa0a1;
+    position: relative;
+}
+
+/* TEXT */
+.research-card p {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+.research-card h2 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.research-card span {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+/* COLORED INDICATOR BAR */
+.research-card::after {
+    content: "";
+    position: absolute;
+    bottom: 12px;
+    right: 15px;
+    width: 40px;
+    height: 6px;
+    border-radius: 10px;
+}
+
+/* COLORS */
+.research-card.blue::after {
+    background: #3b82f6;
+}
+
+.research-card.purple::after {
+    background: #7c3aed;
+}
+
+.research-card.green::after {
+    background: #22c55e;
+}
+
+.research-card.orange::after {
+    background: #f97316;
+}
+
+/* ICON TOP */
+.card-top {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.card-top i {
+    font-size: 30px;
+    opacity: 0.8;
+}
+
+/* COLOR MATCHING ICONS */
+.research-card.blue i {
+    color: #3b82f6;
+}
+
+.research-card.purple i {
+    color: #7c3aed;
+}
+
+.research-card.green i {
+    color: #22c55e;
+}
+
+.research-card.orange i {
+    color: #f97316;
+}
+
+/* GRID */
+.bio-dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px; 
+}
+
+/* CARD */
+.bio-card {
+    background: #fff;
+    padding: 25px; /* increased */
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+/* HOVER */
+.bio-card:hover {
+    transform: translateY(-5px);
+}
+
+/* TITLE */
+.bio-card h4 {
+    font-size: 18px; /* increased */
+    margin-bottom: 6px;
+}
+
+.bio-card .sub {
+    font-size: 14px; /* increased */
+    color: #7a8495;
+    margin-bottom: 20px;
+}
+
+/* CIRCLES */
+.circle-group {
+    display: flex;
+    gap: 20px;
+}
+
+.circle {
+    width: 130px;   /* increased */
+    height: 130px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+    margin-top: 30px;
+}
+
+/* COLORS */
+.circle.blue { background: #3b82f6; }
+.circle.purple { background: #7c3aed; }
+.circle.green { background: #22c55e; }
+
+/* BAR CHART */
+.bar-chart {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 15px;
+    height: 160px; /* increased */
+    margin: 20px 0;
+}
+
+/* BARS */
+.bar {
+    width: 16px; /* thicker */
+    background: linear-gradient(180deg, #4f46e5, #0f172a);
+    border-radius: 8px;
+    height: 0; /* animated via JS */
+    transition: height 1s ease;
+}
+
+/* MONTH LABELS */
+.months {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #7a8495;
+}
+
+/* THIRD CARD TEXT */
+.desc {
+    font-size: 15px; 
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* BUTTON */
+.bio-btn {
+    display: inline-block;
+    padding: 12px 22px;
+    background: #0f172a;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.bio-btn:hover {
+    background: #1e293b;
+}
+
+/* ================= 768px ================= */
+@media (max-width: 768px) {
+
+  /* SECTION */
+  .research-overview {
+    padding: 30px 5%;
+  }
+
+  /* HEADER */
+  .research-header h1 {
+    font-size: 24px;
+  }
+
+  /* TOP STATS GRID */
+  .research-stats {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    gap: 15px;
+  }
+
+  /* CARDS */
+  .research-card {
+    padding: 18px;
+  }
+
+  .research-card h2 {
+    font-size: 22px;
+  }
+
+  .card-top i {
+    font-size: 26px;
+  }
+
+  /* BOTTOM GRID */
+  .bio-dashboard-cards {
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+    gap: 20px;
+  }
+
+  /* CIRCLES */
+  .circle {
+    width: 90px;
+    height: 90px;
+    font-size: 16px;
+  }
+
+  .circle-group {
+    justify-content: center;
+  }
+
+  /* BAR CHART */
+  .bar-chart {
+    height: 140px;
+  }
+
+  .bar {
+    width: 14px;
+  }
+
+  /* TEXT */
+  .desc {
+    font-size: 14px;
+  }
+
+  /* BUTTON */
+  .bio-btn {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+}
+
+/* ================= 360px ================= */
+@media (max-width: 360px) {
+
+  /* SECTION */
+  .research-overview {
+    padding: 25px 4%;
+  }
+
+  /* HEADER */
+  .research-header h1 {
+    font-size: 20px;
+  }
+
+  .research-header p {
+    font-size: 13px;
+  }
+
+  /* TOP GRID */
+  .research-stats {
+    grid-template-columns: 1fr; /* stack */
+    gap: 15px;
+  }
+
+  /* CARD */
+  .research-card {
+    padding: 15px;
+  }
+
+  .research-card p {
+    font-size: 14px;
+  }
+
+  .research-card h2 {
+    font-size: 20px;
+  }
+
+  .card-top i {
+    font-size: 24px;
+  }
+
+  /* BOTTOM GRID */
+  .bio-dashboard-cards {
+    grid-template-columns: 1fr; /* stack */
+    gap: 18px;
+  }
+
+  /* CIRCLES */
+  .circle-group {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .circle {
+    width: 80px;
+    height: 80px;
+    font-size: 15px;
+    margin-top: 10px;
+  }
+
+  /* BAR CHART */
+  .bar-chart {
+    height: 120px;
+    gap: 10px;
+  }
+
+  .bar {
+    width: 12px;
+  }
+
+  .months {
+    font-size: 11px;
+  }
+
+  /* TEXT */
+  .desc {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  /* BUTTON */
+  .bio-btn {
+    width: 100%; /* full width button */
+    text-align: center;
+    font-size: 13px;
+    padding: 10px;
+  }
+}
+
+/* HEADER */
+.clinical-section {
+    padding: 40px 3%; 
+}
+
+.clinical-header h2 {
+    font-size: 26px;
+}
+
+.clinical-header p {
+    color: #7a8495;
+    margin-bottom: 25px;
+}
+
+/* CARD SPACING */
+.clinical-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 14px;
+    margin-bottom: 25px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+}
+
+/* TAGS */
+.tag {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.tag.blue { background: #3b82f6; color: #fff; }
+.tag.dark { background: #111; color: #fff; }
+
+/* TITLE */
+.clinical-card h3 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.sub-text {
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 15px;
+}
+
+/* INFO */
+.clinical-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.info-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.icon {
+    font-size: 24px;
+}
+
+.icon.purple { color: #7c3aed; }
+.icon.green { color: #22c55e; }
+.icon.orange { color: #f97316; }
+
+/* PROGRESS */
+.progress-bar {
+    height: 6px;
+    background: #ddd;
+    border-radius: 10px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #0f172a;
+    border-radius: 10px;
+}
+
+/* FOOTER */
+.clinical-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+/* BUTTONS */
+.btn.dark {
+    background: #0f172a;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.btn.green {
+    background: #22c55e;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.btn.green:hover {
+    background: #16a34a;
+}
+
+@media (max-width: 768px) {
+
+    .clinical-section {
+        padding: 30px 5%;
+    }
+
+    .clinical-header h2 {
+        font-size: 22px;
+    }
+
+    .clinical-header p {
+        font-size: 14px;
+    }
+
+    .clinical-card {
+        padding: 20px;
+    }
+
+    .clinical-card h3 {
+        font-size: 18px;
+    }
+
+    .clinical-info {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .icon {
+        font-size: 22px;
+    }
+
+    .clinical-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .btn.dark,
+    .btn.green {
+        font-size: 13px;
+        padding: 7px 12px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .clinical-section {
+        padding: 20px 15px;
+    }
+
+    .clinical-header h2 {
+        font-size: 18px;
+    }
+
+    .clinical-header p {
+        font-size: 12px;
+    }
+
+    .clinical-card {
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .clinical-card h3 {
+        font-size: 16px;
+    }
+
+    .sub-text {
+        font-size: 12px;
+    }
+
+    .clinical-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .icon {
+        font-size: 20px;
+    }
+
+    .clinical-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+.btn.dark {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+    margin-bottom: 10px;   
+}
+
+.btn.green {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+}
+}
+
+/* SECTION */
+.genomic-section {
+    padding: 40px 3%;
+}
+
+/* HEADER */
+.genomic-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.genomic-header h2 {
+    font-size: 24px;
+}
+
+.genomic-header p {
+    color: #7a8495;
+    font-size: 14px;
+}
+
+/* GRID */
+.genomic-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* CARD */
+.genomic-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    position: relative;
+}
+
+/* ICON */
+.genomic-card .icon {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+/* COLORS */
+.icon.blue { color: #3b82f6; }
+.icon.purple { color: #7c3aed; }
+.icon.green { color: #22c55e; }
+.icon.orange { color: #f97316; }
+.icon.red { color: #ef4444; }
+
+/* TEXT */
+.genomic-card h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.genomic-card p {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+/* STATUS */
+.status {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.status.done {
+    background: #111;
+    color: #fff;
+}
+
+.status.running {
+    background: #ddd;
+}
+
+/* BUTTON */
+.btn.primary {
+    background: #0f172a;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.btn.dark {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: #0f172a;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.btn.dark:hover {
+    background: #1e293b;
+}
+
+@media (max-width: 768px) {
+
+    .genomic-section {
+        padding: 30px 5%;
+    }
+
+    .genomic-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .genomic-header h2 {
+        font-size: 20px;
+    }
+
+    .genomic-header p {
+        font-size: 13px;
+    }
+
+    .genomic-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .genomic-card {
+        padding: 18px;
+    }
+
+    .genomic-card h4 {
+        font-size: 15px;
+    }
+
+    .genomic-card p {
+        font-size: 12px;
+    }
+
+    .icon {
+        font-size: 22px;
+    }
+
+    .status {
+        font-size: 10px;
+        padding: 3px 8px;
+    }
+
+    .btn.primary,
+    .btn.dark {
+        font-size: 13px;
+        padding: 7px 12px;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .genomic-section {
+        padding: 20px 15px;
+    }
+
+    .genomic-header h2 {
+        font-size: 18px;
+    }
+
+    .genomic-header p {
+        font-size: 12px;
+    }
+
+    .genomic-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .genomic-card {
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .genomic-card h4 {
+        font-size: 14px;
+    }
+
+    .genomic-card p {
+        font-size: 11px;
+    }
+
+    .icon {
+        font-size: 20px;
+    }
+
+    .status {
+        font-size: 9px;
+        padding: 3px 7px;
+    }
+
+    .btn.primary,
+    .btn.dark {
+        width: 100%;
+        justify-content: center;
+        font-size: 12px;
+        padding: 9px;
+    }
+}
+
+/* SECTION */
+.funding-section {
+    padding: 40px 3%;
+}
+
+/* HEADER */
+.funding-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.funding-header h2 {
+    font-size: 24px;
+}
+
+.funding-header p {
+    color: #7a8495;
+    font-size: 14px;
+}
+
+/* SUMMARY */
+.funding-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.fund-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    text-align: center;
+}
+
+.fund-card i {
+    font-size: 26px;
+    color: #7c3aed;
+    margin-bottom: 10px;
+}
+
+.fund-card h3 {
+    margin-top: 5px;
+}
+
+/* LIST */
+.funding-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.funding-item {
+    background: #fff;
+    padding: 18px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LEFT */
+.funding-item h4 {
+    margin-bottom: 4px;
+}
+
+.funding-item p {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+/* RIGHT */
+.right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.amount {
+    font-weight: bold;
+}
+
+/* STATUS */
+.status.approved {
+    background: #22c55e;
+    color: #fff;
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+.status.pending {
+    background: #ddd;
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+/* BUTTONS */
+.btn.primary {
+    background: #0f172a;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.btn.light {
+    background: #eee;
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+@media (max-width: 768px) {
+
+    .funding-section {
+        padding: 30px 5%;
+    }
+
+    .funding-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .funding-header h2 {
+        font-size: 20px;
+    }
+
+    .funding-header p {
+        font-size: 13px;
+    }
+
+    .funding-summary {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .fund-card {
+        padding: 18px;
+    }
+
+    .funding-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .right {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .btn.primary,
+    .btn.light {
+        font-size: 13px;
+        padding: 7px 12px;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .funding-section {
+        padding: 20px 15px;
+    }
+
+    .funding-header h2 {
+        font-size: 18px;
+    }
+
+    .funding-header p {
+        font-size: 12px;
+    }
+
+    .funding-summary {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .fund-card {
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .fund-card h3 {
+        font-size: 16px;
+    }
+
+    .funding-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 15px;
+    }
+
+    .right {
+        width: 100%;
+        justify-content: space-between;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .amount {
+        font-size: 14px;
+    }
+
+    .status {
+        font-size: 11px;
+        padding: 3px 7px;
+    }
+
+    .btn.primary,
+    .btn.light {
+        width: 100%;
+        text-align: center;
+        font-size: 12px;
+        padding: 9px;
+    }
+}

@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Biotech Dashboard</title>
+
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+<link rel="stylesheet" href="./css/dashboard.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <!-- LEFT SIDE -->
+    <div class="nav-left">
+
+<div class="logo">
+    <img src="./images/stackly_logo.webp" alt="Stacckly Logo" class="logo-img">
+</div>
+
+        <div class="menu-btn" id="openMenu">
+            <i class="ri-menu-line"></i>
+        </div>
+
+    </div>
+
+
+    <!-- RIGHT SIDE -->
+    <div class="nav-right">
+
+        <!-- SEARCH -->
+<form class="nav-search" action="404dashboard.html">
+
+    <i class="ri-search-line"></i>
+    
+    <input 
+        type="text" 
+        placeholder="Search experiments"
+        name="search"
+    >
+
+</form>
+
+
+        <!-- BIOTECH ICONS -->
+<div class="nav-icons-wrapper">
+
+    <a href="404dashboard.html" class="nav-icon">
+        <i class="ri-edit-box-line"></i>
+    </a>
+
+    <a href="404dashboard.html" class="nav-icon notification">
+        <i class="ri-notification-3-line"></i>
+        <span class="badge">4</span>
+    </a>
+
+</div>
+
+<!-- PROFILE -->
+<div class="profile">
+
+    <div class="avatar">
+        <i class="ri-user-3-line"></i>
+    </div>
+
+    <div class="profile-info">
+        <p class="name">Dr. Karthik Admin</p>
+        <p class="email">karthikbiotech@gmail.com</p>
+    </div>
+
+</div>
+
+    </div>
+
+</nav>
+
+
+<!-- SIDEBAR -->
+
+<div class="sidebar" id="sidebar">
+
+    <!-- SIDEBAR HEADER -->
+    <div class="sidebar-header">
+
+        <img src="./images/stackly_logo.webp" alt="logo" class="sidebar-logo">
+
+        <div class="close-btn" id="closeMenu">
+            <i class="ri-close-line"></i>
+        </div>
+
+    </div>
+
+
+    <!-- SIDEBAR MENU -->
+    <ul class="sidebar-menu">
+
+        <li>
+            <a href="#admin-dashboard">
+                <i class="ri-dashboard-line"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#experiments">
+                <i class="ri-flask-line"></i>
+                <span>Experiments</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#lab-reports">
+                <i class="ri-file-chart-line"></i>
+                <span>Lab Reports</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#dna-analytics">
+                <i class="ri-virus-line"></i>
+                <span>DNA Analysis</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#research-papers">
+                <i class="ri-book-open-line"></i>
+                <span>Research Papers</span>
+            </a>
+        </li>
+
+
+        <li>
+            <a href="404dashboard.html">
+                <i class="ri-settings-3-line"></i>
+                <span>Settings</span>
+            </a>
+        </li>
+
+    </ul>
+
+</div>
+
+<section class="admin-dashboard">
+
+<div class="dashboard-header">
+
+<h2>Admin Dashboard</h2>
+
+<input type="month" id="monthPicker">
+
+</div>
+
+
+<div class="dashboard-grid">
+
+<!-- LEFT SIDE -->
+
+<div class="left-analytics">
+
+<div class="circle-card">
+
+<h3>DNA Analysis</h3>
+
+<canvas id="dnaChart"></canvas>
+<span>68%</span>
+
+</div>
+
+
+<div class="circle-card">
+
+<h3>Experiment Success</h3>
+
+<canvas id="expChart"></canvas>
+<span>80%</span>
+
+</div>
+
+</div>
+
+
+
+<!-- RIGHT SIDE -->
+
+<div class="right-stats">
+
+<div class="stat-card">
+<i class="ri-flask-line"></i>
+<h4 id="experiments">128</h4>
+<p>Total Experiments</p>
+</div>
+
+
+<div class="stat-card">
+<i class="ri-microscope-line"></i>
+<h4 id="samples">452</h4>
+<p>Samples Tested</p>
+</div>
+
+
+<div class="stat-card">
+<i class="ri-virus-line"></i>
+<h4 id="dna">89</h4>
+<p>DNA Sequencing</p>
+</div>
+
+
+<div class="stat-card">
+<i class="ri-team-line"></i>
+<h4 id="researchers">24</h4>
+<p>Researchers</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="bio-analytics">
+
+<div class="analytics-grid">
+
+<!-- LEFT BIG FLOW CHART -->
+<div class="chart-card">
+
+<div class="card-header">
+<h3>Gene Expression Activity</h3>
+</div>
+
+<canvas id="geneChart"></canvas>
+
+</div>
+
+
+<!-- RIGHT SMALL CARD 1 -->
+<div class="mini-card">
+
+<i class="ri-microscope-line mini-icon"></i>
+
+<h4>Samples Processed</h4>
+<h2>1,254</h2>
+<p>This Month</p>
+
+<div class="chart-wrapper">
+<canvas id="sampleChart"></canvas>
+<span class="chart-value">60%</span>
+</div>
+
+</div>
+
+
+<div class="mini-card">
+
+<i class="ri-virus-line mini-icon"></i>
+
+<h4>DNA Sequences</h4>
+<h2>842</h2>
+<p>This Month</p>
+
+<div class="chart-wrapper">
+<canvas id="dnaMiniChart"></canvas>
+<span class="chart-value">75%</span>
+</div>
+
+</div>
+
+
+<!-- BOTTOM LEFT -->
+<div class="bottom-card">
+
+<div class="card-header">
+<h3>Lab Equipment Usage</h3>
+<i class="ri-flask-line"></i>
+</div>
+
+<!-- PCR Machine -->
+<div class="equipment">
+<div class="equipment-top">
+<span>PCR Machine</span>
+<span>72%</span>
+</div>
+<div class="progress-bar">
+<div class="progress-fill" style="width:72%"></div>
+</div>
+</div>
+
+<!-- DNA Sequencer -->
+<div class="equipment">
+<div class="equipment-top">
+<span>DNA Sequencer</span>
+<span>58%</span>
+</div>
+<div class="progress-bar">
+<div class="progress-fill" style="width:58%"></div>
+</div>
+</div>
+
+<!-- Gel Electrophoresis -->
+<div class="equipment">
+<div class="equipment-top">
+<span>Gel Electrophoresis System</span>
+<span>65%</span>
+</div>
+<div class="progress-bar">
+<div class="progress-fill" style="width:65%"></div>
+</div>
+</div>
+
+<!-- Cell Incubator -->
+<div class="equipment">
+<div class="equipment-top">
+<span>Cell Culture Incubator</span>
+<span>81%</span>
+</div>
+<div class="progress-bar">
+<div class="progress-fill" style="width:81%"></div>
+</div>
+</div>
+
+<!-- Spectrophotometer -->
+<div class="equipment">
+<div class="equipment-top">
+<span>Spectrophotometer</span>
+<span>47%</span>
+</div>
+<div class="progress-bar">
+<div class="progress-fill" style="width:47%"></div>
+</div>
+</div>
+
+</div>
+
+
+<!-- BOTTOM RIGHT -->
+<div class="bottom-card publication-card">
+
+<div class="card-header">
+<h3>Research Publications</h3>
+<i class="ri-book-open-line"></i>
+</div>
+
+<p>Papers Published</p>
+
+<div class="pub-chart">
+<canvas id="publicationChart"></canvas>
+<span class="pub-percent">72%</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!--EXPERIMENT SECTION-->
+<section class="experiment-section">
+
+    <h2 class="section-title">Ongoing Experiments</h2>
+
+    <div class="experiment-grid">
+
+        <div class="experiment-card">
+            <i class="ri-flask-line"></i>
+            <h3>Gene Editing Trials</h3>
+            <canvas id="geneEditChart"></canvas>
+            <p>Active Experiments</p>
+        </div>
+
+        <div class="experiment-card">
+            <i class="ri-virus-line"></i>
+            <h3>DNA Sequencing Tests</h3>
+            <canvas id="dnaSeqChart"></canvas>
+            <p>Samples Processing</p>
+        </div>
+
+        <div class="experiment-card">
+            <i class="ri-microscope-line"></i>
+            <h3>Cell Culture Studies</h3>
+            <canvas id="cellCultureChart"></canvas>
+            <p>Running Projects</p>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="experiment-section">
+
+    <h2 class="section-title">Completed Experiments</h2>
+
+    <div class="experiment-grid">
+
+        <div class="experiment-card">
+            <i class="ri-dna-line"></i>
+            <h3>Genome Mapping</h3>
+            <canvas id="genomeMapChart"></canvas>
+            <p>Completed Studies</p>
+        </div>
+
+        <div class="experiment-card">
+            <i class="ri-test-tube-line"></i>
+            <h3>Protein Analysis</h3>
+            <canvas id="proteinAnalysisChart"></canvas>
+            <p>Successful Tests</p>
+        </div>
+
+        <div class="experiment-card">
+            <i class="ri-leaf-line"></i>
+            <h3>Plant Biotechnology</h3>
+            <canvas id="plantBioChart"></canvas>
+            <p>Research Trials</p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- LAB REPORTS SECTION -->
+
+<section class="lab-reports">
+
+<h2 class="section-title">Related Lab Reports</h2>
+<p class="section-desc">
+Access your test results, analyses, and documentation.
+</p>
+
+
+<!-- REPORT SUMMARY CARDS -->
+
+<div class="report-stats">
+
+<div class="stat-card">
+<i class="ri-file-text-line"></i>
+<h3>128</h3>
+<p>Total Reports</p>
+</div>
+
+<div class="stat-card">
+<i class="ri-check-line"></i>
+<h3>92</h3>
+<p>Completed Reports</p>
+</div>
+
+<div class="stat-card">
+<i class="ri-time-line"></i>
+<h3>21</h3>
+<p>Pending Analysis</p>
+</div>
+
+<div class="stat-card">
+<i class="ri-download-2-line"></i>
+<h3>340</h3>
+<p>Total Downloads</p>
+</div>
+
+</div>
+
+
+<!-- DOCUMENT SECTION -->
+
+<div class="reports-grid">
+
+<!-- 1 -->
+
+<div class="report-card">
+
+<div class="report-icon">
+<i class="ri-file-text-line"></i>
+</div>
+
+<div class="report-info">
+<h3>DNA Sequencing Report</h3>
+<p>Genetic sequencing analysis</p>
+</div>
+
+<div class="report-actions">
+<a href="404dashboard.html"><i class="ri-eye-line"></i> View</a>
+<a href="404dashboard.html"><i class="ri-download-line"></i> Download</a>
+</div>
+
+</div>
+
+
+<!-- 2 -->
+
+<div class="report-card">
+
+<div class="report-icon">
+<i class="ri-file-chart-line"></i>
+</div>
+
+<div class="report-info">
+<h3>Protein Structure Study</h3>
+<p>Protein folding research data</p>
+</div>
+
+<div class="report-actions">
+<a href="404dashboard.html"><i class="ri-eye-line"></i> View</a>
+<a href="404dashboard.html"><i class="ri-download-line"></i> Download</a>
+</div>
+
+</div>
+
+
+<!-- 3 -->
+
+<div class="report-card">
+
+<div class="report-icon">
+<i class="ri-file-paper-2-line"></i>
+</div>
+
+<div class="report-info">
+<h3>Cell Culture Observation</h3>
+<p>Growth cycle monitoring</p>
+</div>
+
+<div class="report-actions">
+<a href="404dashboard.html"><i class="ri-eye-line"></i> View</a>
+<a href="404dashboard.html"><i class="ri-download-line"></i> Download</a>
+</div>
+
+</div>
+
+
+<!-- 4 -->
+
+<div class="report-card">
+<div class="report-icon">
+<i class="ri-file-text-line"></i>
+</div>
+
+<div class="report-info">
+<h3>Genome Mapping Report</h3>
+<p>Genome sequencing analysis</p>
+</div>
+
+<div class="report-actions">
+<a href="404dashboard.html"><i class="ri-eye-line"></i> View</a>
+<a href="404dashboard.html"><i class="ri-download-line"></i> Download</a>
+</div>
+</div>
+
+
+<!-- 5 -->
+
+<div class="report-card">
+<div class="report-icon">
+<i class="ri-file-text-line"></i>
+</div>
+
+<div class="report-info">
+<h3>Virus Detection Study</h3>
+<p>Pathogen analysis results</p>
+</div>
+
+<div class="report-actions">
+<a href="404dashboard.html"><i class="ri-eye-line"></i> View</a>
+<a href="404dashboard.html"><i class="ri-download-line"></i> Download</a>
+</div>
+</div>
+
+
+<!-- 6 -->
+
+<div class="report-card">
+<div class="report-icon">
+<i class="ri-file-chart-line"></i>
+</div>
+
+<div class="report-info">
+<h3>DNA Mutation Report</h3>
+<p>Mutation identification study</p>
+</div>
+
+<div class="report-actions">
+<a href="404dashboard.html"><i class="ri-eye-line"></i> View</a>
+<a href="404dashboard.html"><i class="ri-download-line"></i> Download</a>
+</div>
+</div>
+
+
+<!-- 7 -->
+
+<div class="report-card">
+<div class="report-icon">
+<i class="ri-file-text-line"></i>
+</div>
+
+<div class="report-info">
+<h3>Plant Biotechnology Trial</h3>
+<p>Crop genetic modification results</p>
+</div>
+
+<div class="report-actions">
+<a href="404dashboard.html"><i class="ri-eye-line"></i> View</a>
+<a href="404dashboard.html"><i class="ri-download-line"></i> Download</a>
+</div>
+</div>
+
+
+<!-- 8 -->
+
+<div class="report-card">
+<div class="report-icon">
+<i class="ri-file-paper-line"></i>
+</div>
+
+<div class="report-info">
+<h3>Stem Cell Research</h3>
+<p>Cell regeneration experiment</p>
+</div>
+
+<div class="report-actions">
+<a href="404dashboard.html"><i class="ri-eye-line"></i> View</a>
+<a href="404dashboard.html"><i class="ri-download-line"></i> Download</a>
+</div>
+</div>
+
+
+<!-- 9 -->
+
+<div class="report-card">
+<div class="report-icon">
+<i class="ri-file-text-line"></i>
+</div>
+
+<div class="report-info">
+<h3>CRISPR Gene Editing</h3>
+<p>Gene editing trial results</p>
+</div>
+
+<div class="report-actions">
+<a href="404dashboard.html"><i class="ri-eye-line"></i> View</a>
+<a href="404dashboard.html"><i class="ri-download-line"></i> Download</a>
+</div>
+</div>
+
+
+<!-- 10 -->
+
+<div class="report-card">
+<div class="report-icon">
+<i class="ri-file-chart-line"></i>
+</div>
+
+<div class="report-info">
+<h3>Microbial Analysis</h3>
+<p>Bacteria growth report</p>
+</div>
+
+<div class="report-actions">
+<a href="404dashboard.html"><i class="ri-eye-line"></i> View</a>
+<a href="404dashboard.html"><i class="ri-download-line"></i> Download</a>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- DNA ANALYTICS SECTION -->
+<section class="dna-analytics">
+
+<h2 class="section-title">DNA Analytics</h2>
+
+<div class="dna-grid">
+
+    <!-- DNA Progress Chart -->
+    <div class="dna-card">
+        <h3>Genome Sequencing</h3>
+        <canvas id="dnaProgress"></canvas>
+        <div class="dna-center">
+            <h2>72%</h2>
+            <p>Completed</p>
+        </div>
+    </div>
+
+    <!-- Gene Expression Chart -->
+<div class="dna-card">
+    <h3>Gene Expression</h3>
+
+    <canvas id="geneExpressionChart"></canvas>
+
+    <div class="dna-center">
+        <h2>58%</h2>
+        <p>Analyzed</p>
+    </div>
+</div>
+
+    <!-- DNA Stats -->
+    <div class="dna-stats">
+
+        <div class="dna-stat-card">
+            <div class="dna-icon">🧬</div>
+            <div>
+                <h4>DNA Samples</h4>
+                <p>1,240 <span>+12%</span></p>
+            </div>
+        </div>
+
+        <div class="dna-stat-card">
+            <div class="dna-icon">🔬</div>
+            <div>
+                <h4>Experiments</h4>
+                <p>842 <span>+8%</span></p>
+            </div>
+        </div>
+
+        <div class="dna-stat-card">
+            <div class="dna-icon">🧪</div>
+            <div>
+                <h4>Active Tests</h4>
+                <p>214 <span>+4%</span></p>
+            </div>
+        </div>
+
+        <div class="dna-stat-card">
+            <div class="dna-icon">📊</div>
+            <div>
+                <h4>Success Rate</h4>
+                <p>91% <span>+2%</span></p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<!--RESEARCH PAPER SECTION-->
+<section class="research-papers">
+
+<div class="research-header">
+
+<div>
+<h2>Research Papers</h2>
+<p>Manage and track scientific publications</p>
+</div>
+
+<button class="new-paper-btn" onclick="window.location.href='404dashboard.html'">
+<i class="ri-add-line"></i> New Paper
+</button>
+
+</div>
+
+
+<div class="papers-grid">
+
+<!-- PAPER 1 -->
+<div class="paper-card">
+
+<div class="paper-top">
+<div>
+<h3>Cancer Genomics Study</h3>
+<p>Analysis of genetic mutations in breast cancer patients</p>
+</div>
+<span class="status">Published</span>
+</div>
+
+<div class="paper-stats">
+
+<div class="paper-stat">
+<i class="ri-team-line"></i>
+<div>
+<p>Authors</p>
+<h4>4</h4>
+</div>
+</div>
+
+<div class="paper-stat">
+<i class="ri-book-open-line"></i>
+<div>
+<p>Journal</p>
+<h4>Nature</h4>
+</div>
+</div>
+
+<div class="paper-stat">
+<i class="ri-bar-chart-line"></i>
+<div>
+<p>Citations</p>
+<h4>98</h4>
+</div>
+</div>
+
+<div class="paper-stat">
+<i class="ri-award-line"></i>
+<div>
+<p>Impact</p>
+<h4>41.2</h4>
+</div>
+</div>
+
+</div>
+
+<div class="paper-progress">
+
+<div class="progress-top">
+<span>Review Progress</span>
+<span>67%</span>
+</div>
+
+<div class="progress-bar">
+<div class="progress-fill" style="width:67%"></div>
+</div>
+
+</div>
+
+<div class="paper-bottom">
+
+<div>
+<p>Lead Author</p>
+<h4>Dr. Emily Chen</h4>
+</div>
+
+<div class="paper-actions">
+<button class="btn-primary">View Paper</button>
+<button class="btn-outline">Team</button>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PAPER 2 -->
+<div class="paper-card">
+
+<div class="paper-top">
+<div>
+<h3>CRISPR Gene Editing</h3>
+<p>Precision genome editing using CRISPR-Cas9</p>
+</div>
+<span class="status">Published</span>
+</div>
+
+<div class="paper-stats">
+
+<div class="paper-stat">
+<i class="ri-team-line"></i>
+<div><p>Authors</p><h4>6</h4></div>
+</div>
+
+<div class="paper-stat">
+<i class="ri-book-open-line"></i>
+<div><p>Journal</p><h4>Science</h4></div>
+</div>
+
+<div class="paper-stat">
+<i class="ri-bar-chart-line"></i>
+<div><p>Citations</p><h4>145</h4></div>
+</div>
+
+<div class="paper-stat">
+<i class="ri-award-line"></i>
+<div><p>Impact</p><h4>43.9</h4></div>
+</div>
+
+</div>
+
+<div class="paper-progress">
+<div class="progress-top"><span>Review Progress</span><span>82%</span></div>
+<div class="progress-bar"><div class="progress-fill" style="width:82%"></div></div>
+</div>
+
+<div class="paper-bottom">
+<div><p>Lead Author</p><h4>Dr. Sarah Williams</h4></div>
+<div class="paper-actions">
+<button class="btn-primary">View Paper</button>
+<button class="btn-outline">Team</button>
+</div>
+</div>
+
+</div>
+
+
+<!-- PAPER 3 -->
+<div class="paper-card">
+
+<div class="paper-top">
+<div>
+<h3>Protein Folding Analysis</h3>
+<p>Studying protein folding mechanisms in cells</p>
+</div>
+<span class="status">Review</span>
+</div>
+
+<div class="paper-stats">
+<div class="paper-stat"><i class="ri-team-line"></i><div><p>Authors</p><h4>3</h4></div></div>
+<div class="paper-stat"><i class="ri-book-open-line"></i><div><p>Journal</p><h4>Cell</h4></div></div>
+<div class="paper-stat"><i class="ri-bar-chart-line"></i><div><p>Citations</p><h4>67</h4></div></div>
+<div class="paper-stat"><i class="ri-award-line"></i><div><p>Impact</p><h4>38.1</h4></div></div>
+</div>
+
+<div class="paper-progress">
+<div class="progress-top"><span>Review Progress</span><span>54%</span></div>
+<div class="progress-bar"><div class="progress-fill" style="width:54%"></div></div>
+</div>
+
+<div class="paper-bottom">
+<div><p>Lead Author</p><h4>Dr. John Parker</h4></div>
+<div class="paper-actions">
+<button class="btn-primary">View Paper</button>
+<button class="btn-outline">Team</button>
+</div>
+</div>
+
+</div>
+
+
+<!-- PAPER 4 -->
+<div class="paper-card">
+
+<div class="paper-top">
+<div>
+<h3>Stem Cell Regeneration</h3>
+<p>Advancements in stem cell tissue regeneration</p>
+</div>
+<span class="status">Published</span>
+</div>
+
+<div class="paper-stats">
+<div class="paper-stat"><i class="ri-team-line"></i><div><p>Authors</p><h4>5</h4></div></div>
+<div class="paper-stat"><i class="ri-book-open-line"></i><div><p>Journal</p><h4>Nature Medicine</h4></div></div>
+<div class="paper-stat"><i class="ri-bar-chart-line"></i><div><p>Citations</p><h4>112</h4></div></div>
+<div class="paper-stat"><i class="ri-award-line"></i><div><p>Impact</p><h4>36.5</h4></div></div>
+</div>
+
+<div class="paper-progress">
+<div class="progress-top"><span>Review Progress</span><span>74%</span></div>
+<div class="progress-bar"><div class="progress-fill" style="width:74%"></div></div>
+</div>
+
+<div class="paper-bottom">
+<div><p>Lead Author</p><h4>Dr. Robert Kim</h4></div>
+<div class="paper-actions">
+<button class="btn-primary">View Paper</button>
+<button class="btn-outline">Team</button>
+</div>
+</div>
+
+</div>
+
+
+<!-- PAPER 5 -->
+<div class="paper-card">
+
+<div class="paper-top">
+<div>
+<h3>Genome Mapping Techniques</h3>
+<p>Improving genome mapping accuracy</p>
+</div>
+<span class="status">Published</span>
+</div>
+
+<div class="paper-stats">
+<div class="paper-stat"><i class="ri-team-line"></i><div><p>Authors</p><h4>4</h4></div></div>
+<div class="paper-stat"><i class="ri-book-open-line"></i><div><p>Journal</p><h4>Genome Research</h4></div></div>
+<div class="paper-stat"><i class="ri-bar-chart-line"></i><div><p>Citations</p><h4>89</h4></div></div>
+<div class="paper-stat"><i class="ri-award-line"></i><div><p>Impact</p><h4>29.8</h4></div></div>
+</div>
+
+<div class="paper-progress">
+<div class="progress-top"><span>Review Progress</span><span>63%</span></div>
+<div class="progress-bar"><div class="progress-fill" style="width:63%"></div></div>
+</div>
+
+<div class="paper-bottom">
+<div><p>Lead Author</p><h4>Dr. Anna Lee</h4></div>
+<div class="paper-actions">
+<button class="btn-primary">View Paper</button>
+<button class="btn-outline">Team</button>
+</div>
+</div>
+
+</div>
+
+
+<!-- PAPER 6 -->
+<div class="paper-card">
+
+<div class="paper-top">
+<div>
+<h3>Microbial Genome Study</h3>
+<p>Understanding microbial genetic diversity</p>
+</div>
+<span class="status">Review</span>
+</div>
+
+<div class="paper-stats">
+<div class="paper-stat"><i class="ri-team-line"></i><div><p>Authors</p><h4>7</h4></div></div>
+<div class="paper-stat"><i class="ri-book-open-line"></i><div><p>Journal</p><h4>Microbiology</h4></div></div>
+<div class="paper-stat"><i class="ri-bar-chart-line"></i><div><p>Citations</p><h4>58</h4></div></div>
+<div class="paper-stat"><i class="ri-award-line"></i><div><p>Impact</p><h4>21.6</h4></div></div>
+</div>
+
+<div class="paper-progress">
+<div class="progress-top"><span>Review Progress</span><span>48%</span></div>
+<div class="progress-bar"><div class="progress-fill" style="width:48%"></div></div>
+</div>
+
+<div class="paper-bottom">
+<div><p>Lead Author</p><h4>Dr. Michael Grant</h4></div>
+<div class="paper-actions">
+<button class="btn-primary">View Paper</button>
+<button class="btn-outline">Team</button>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="./js/dashboard.js"></script>
+
+</body>
+</html>
