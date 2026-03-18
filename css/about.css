@@ -177,6 +177,10 @@ header{
     color:#000;
   }
 
+      .nav__links li a{
+    color: #fff;
+  }
+
 }
 
 @media (max-width:360px){
@@ -190,6 +194,9 @@ header{
     margin-left: auto;
   }
 
+      .nav__links li a{
+    color: #fff;
+  }
 }
 
 

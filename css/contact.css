@@ -166,6 +166,9 @@ header{
     color:#000;
   }
 
+    .nav__links li a{
+    color: #fff;
+  }
 
   /* MOBILE SCROLLED DROPDOWN */
 
@@ -188,6 +191,10 @@ header{
   .nav__menu__btn{
     font-size:1.6rem;
     margin-left: auto;
+  }
+
+  .nav__links li a{
+    color: #fff;
   }
 
 }

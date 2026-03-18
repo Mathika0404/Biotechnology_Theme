@@ -156,6 +156,10 @@ header{
     text-align:center;
   }
 
+    .nav__links li a{
+    color: #fff;
+  }
+
   /* MOBILE SCROLLED */
 
   .navbar.scrolled .nav__links{
@@ -190,6 +194,9 @@ header{
     margin-left: auto;
   }
 
+    .nav__links li a{
+    color: #fff;
+  }
 }
 
 
