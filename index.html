@@ -400,6 +400,99 @@ accelerate healthcare discoveries and life science advancements.
 
 </section>
 
+<section class="tech-section">
+
+  <div class="tech-overlay"></div>
+
+  <div class="tech-container">
+    
+    <h2>Our Technology</h2>
+    <p class="subtitle">Advanced tools powering innovation in biotechnology</p>
+
+    <div class="tech-grid">
+
+      <!-- CARD 1 -->
+      <div class="tech-card">
+        <img src="images/tech-card1.webp" alt="">
+<h3>Stem Cell Technology</h3>
+<p>Regenerative therapies using stem cells to repair and replace damaged tissues.</p>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="tech-card">
+        <img src="images/tech-card2.webp" alt="">
+<h3>Nanobiotechnology</h3>
+<p>Using nanoscale materials for targeted delivery and advanced diagnostics.</p>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="tech-card">
+        <img src="images/tech-card3.webp" alt="">
+<h3>Agricultural Biotechnology</h3>
+<p>Improving crop yield and resistance using genetic modification and sustainable techniques.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="faq-section">
+
+  <h2>Frequently Asked Questions</h2>
+
+<div class="faq-item">
+  <div class="faq-question">
+    <h3>What is the role of Artificial Intelligence in biotechnology?</h3>
+    <span class="icon">+</span>
+  </div>
+  <p class="faq-answer">
+    Artificial Intelligence (AI) plays a transformative role in biotechnology by enabling faster data analysis, accurate predictions, and automation of complex biological processes. It helps researchers analyze vast datasets such as genomic sequences, protein structures, and clinical data. AI also supports drug discovery, disease prediction, and personalized medicine by identifying patterns that are difficult for humans to detect, ultimately accelerating innovation and reducing research time.
+  </p>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">
+    <h3>How does AI improve efficiency in laboratory research?</h3>
+    <span class="icon">+</span>
+  </div>
+  <p class="faq-answer">
+    AI improves laboratory efficiency by automating repetitive tasks, minimizing human error, and optimizing experimental workflows. Smart laboratory systems can monitor experiments in real time, analyze results instantly, and suggest improvements. This not only saves time but also reduces operational costs. Additionally, AI-powered robots and automation tools allow researchers to focus on innovation rather than manual processes.
+  </p>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">
+    <h3>What are the key technologies used in AI-driven biotechnology?</h3>
+    <span class="icon">+</span>
+  </div>
+  <p class="faq-answer">
+    AI-driven biotechnology integrates multiple advanced technologies such as machine learning, deep learning, bioinformatics, and synthetic biology. It also uses big data analytics, cloud computing, and high-performance computing systems to process complex biological information. These technologies work together to enhance research capabilities, improve accuracy, and enable breakthroughs in areas like genomics, drug development, and environmental sustainability.
+  </p>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">
+    <h3>Is AI-based biotechnology safe and ethically regulated?</h3>
+    <span class="icon">+</span>
+  </div>
+  <p class="faq-answer">
+    Yes, AI-based biotechnology operates under strict ethical guidelines and regulatory frameworks to ensure safety and transparency. Research institutions and organizations follow international standards to protect data privacy, ensure responsible use of genetic information, and prevent misuse of technology. Continuous monitoring and validation processes are also implemented to maintain accuracy and reliability in outcomes.
+  </p>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">
+    <h3>How can individuals or organizations collaborate with your research team?</h3>
+    <span class="icon">+</span>
+  </div>
+  <p class="faq-answer">
+    Individuals, researchers, and organizations can collaborate with our team through partnerships, research programs, internships, or consultancy services. We welcome collaborations that aim to innovate and solve real-world biological challenges. Interested parties can reach out through our contact section, submit proposals, or explore available opportunities in our careers page to get involved in our ongoing projects.
+  </p>
+</div>
+
+</section>
+
 
 <!-- FOOTER SECTION -->
 <footer class="bio-footer">
@@ -486,6 +579,8 @@ accelerate healthcare discoveries and life science advancements.
   </div>
 
 </footer>
+
+
 <script>
     const counters = document.querySelectorAll(".counter");
 
@@ -509,6 +604,34 @@ counter.innerText = target;
 
 updateCounter();
 
+});
+
+const faqs = document.querySelectorAll(".faq-item");
+
+faqs.forEach(faq => {
+  const question = faq.querySelector(".faq-question");
+  const icon = faq.querySelector(".icon");
+
+  question.addEventListener("click", () => {
+
+    // Close others (optional)
+    faqs.forEach(item => {
+      if(item !== faq){
+        item.classList.remove("active");
+        item.querySelector(".icon").innerText = "+";
+      }
+    });
+
+    // Toggle current
+    faq.classList.toggle("active");
+
+    if(faq.classList.contains("active")){
+      icon.innerText = "-";
+    } else {
+      icon.innerText = "+";
+    }
+
+  });
 });
 </script>
 <script src="./js/script.js"></script>
